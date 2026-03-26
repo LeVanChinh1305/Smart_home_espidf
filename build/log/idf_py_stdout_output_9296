@@ -1,0 +1,110 @@
+Command: D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace D:\projects\smart_home_project\build\smart_home_project.elf D:\projects\smart_home_project\build\bootloader\bootloader.elf --force-color -m 'D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py' '-p' 'COM5'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xec8
+load:0x4086e610,len:0x31c8
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 26 2026 16:35:57[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (24) boot: efuse block revision: v0.2[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (72) boot: End of partition table[0m
+[0;32mI (75) esp_image: segment 0: paddr=00010020 vaddr=42020020 size=0d7a8h ( 55208) map[0m
+[0;32mI (93) esp_image: segment 1: paddr=0001d7d0 vaddr=40800000 size=02848h ( 10312) load[0m
+[0;32mI (96) esp_image: segment 2: paddr=00020020 vaddr=42000020 size=1def8h (122616) map[0m
+[0;32mI (120) esp_image: segment 3: paddr=0003df20 vaddr=40802848 size=0c470h ( 50288) load[0m
+[0;32mI (132) esp_image: segment 4: paddr=0004a398 vaddr=4080ecc0 size=01ae8h (  6888) load[0m
+[0;32mI (134) esp_image: segment 5: paddr=0004be88 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (139) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (141) boot: Disabling RNG early entropy source...[0m
+[0;32mI (157) cpu_start: Unicore app[0m
+[0;32mI (166) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (166) cpu_start: Pro cpu start user code[0m
+[0;32mI (166) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (172) app_init: Project name:     smart_home_project[0m
+[0;32mI (177) app_init: App version:      1[0m
+[0;32mI (180) app_init: Compile time:     Mar 26 2026 16:36:05[0m
+[0;32mI (185) app_init: ELF file SHA256:  3c85db23e...[0m
+[0;32mI (189) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (194) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (197) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (201) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (205) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (212) heap_init: At 408117F0 len 0006AE20 (427 KiB): RAM[0m
+[0;32mI (217) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (222) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (228) spi_flash: detected chip: generic[0m
+[0;32mI (231) spi_flash: flash io: dio[0m
+[0;33mW (234) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (247) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (252) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (259) coexist: coex firmware version: 7260f71[0m
+[0;32mI (263) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (268) main_task: Started on CPU0[0m
+[0;32mI (268) main_task: Calling app_main()[0m
+[0;32mI (278) SMART_HOME_MAIN: Đang khởi động hệ thống...[0m
+[1;31mE (318) rc522: rc522_spi_receive(125): driver->device == NULL[0m
+[1;31mE (338) rc522: rc522_spi_receive(125): driver->device == NULL[0m
+[1;31mE (358) rc522: rc522_spi_receive(125): driver->device == NULL[0m
+[1;31mE (378) rc522: rc522_spi_receive(125): driver->device == NULL[0m
+[1;31mE (398) rc522: rc522_spi_receive(125): driver->device == NULL[0m
+[1;31mE (418) rc522: rc522_spi_receive(125): driver->device == NULL[0m
+[1;31mE (438) rc522: rc522_spi_receive(125): driver->device == NULL[0m
+[1;31mE (458) rc522: rc522_spi_receive(125): driver->device == NULL[0m
+[0;33mW (458) rc522: rc522_pcd_reset(117): hard reset failed, trying soft reset[0m
+[1;31mE (458) rc522: rc522_spi_send(107): driver->device == NULL[0m
+[1;31mE (458) rc522: rc522_pcd_write_n(319): 0102[0m
+[1;31mE (468) rc522: rc522_pcd_soft_reset(106): 0102[0m
+[1;31mE (468) rc522: rc522_start(85): 0102[0m
+[0;32mI (468) SMART_HOME_MAIN: Bắt đầu theo dõi khí GAS[0m
+[0;32mI (478) MQ2_COMPONENT: Hieu chuan Curve Fitting thanh cong.[0m
+[0;32mI (478) SMART_HOME_MAIN: Giá trị MQ2: 238 mV[0m
+[0;32mI (488) SMART_HOME_MAIN: Hệ thống đã khởi động xong. Các task đang chạy ngầm.[0m
+[0;32mI (498) main_task: Returned from app_main()[0m
+[0;32mI (1488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (2488) SMART_HOME_MAIN: Giá trị MQ2: 238 mV[0m
+[0;32mI (3488) SMART_HOME_MAIN: Giá trị MQ2: 238 mV[0m
+[0;32mI (4488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (5488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (6488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (7488) SMART_HOME_MAIN: Giá trị MQ2: 238 mV[0m
+[0;32mI (8488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (9488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (10488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (11488) SMART_HOME_MAIN: Giá trị MQ2: 238 mV[0m
+[0;32mI (12488) SMART_HOME_MAIN: Giá trị MQ2: 238 mV[0m
+[0;32mI (13488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (14488) SMART_HOME_MAIN: Giá trị MQ2: 238 mV[0m
+[0;32mI (15488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (16488) SMART_HOME_MAIN: Giá trị MQ2: 238 mV[0m
+[0;32mI (17488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (18488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (19488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (20488) SMART_HOME_MAIN: Giá trị MQ2: 237 mV[0m
+[0;32mI (21488) SMART_HOME_MAIN: Giá trị MQ2: 254 mV[0m
+[0;32mI (22488) SMART_HOME_MAIN: Giá trị MQ2: 253 mV[0m
+[0;32mI (23488) SMART_HOME_MAIN: Giá trị MQ2: 253 mV[0m
+[0;32mI (24488) SMART_HOME_MAIN: Giá trị MQ2: 254 mV[0m
+[0;32mI (25488) SMART_HOME_MAIN: Giá trị MQ2: 253 mV[0m
+[0;32mI (26488) SMART_HOME_MAIN: Giá trị MQ2: 253 mV[0m
+[0;32mI (27488) SMART_HOME_MAIN: Giá trị MQ2: 253 mV[0m
+[0;32mI (28488) SMART_HOME_MAIN: Giá trị MQ2: 253 mV[0m
+[0;32mI (29488) SMART_HOME_MAIN: Giá trị MQ2: 254 mV[0m
+[0;32mI (30488) SMART_HOME_MAIN: Giá trị MQ2: 254 mV[0m
+[0;32mI (31488) SMART_HOME_MAIN: Giá trị MQ2: 254 mV[0m
+[0;32mI (32488) SMART_HOME_MAIN: Giá trị MQ2: 253 mV[0m
+[0;32mI (33488) SMART_HOME_MAIN: Giá trị MQ2: 254 mV[0m
