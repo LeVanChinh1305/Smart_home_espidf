@@ -1,0 +1,36 @@
+### Đăng ký tài khoản
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "firstName": "Nguyen",
+  "lastName": "Admin",
+  "email": "admin@smarthub.local",
+  "password": "Admin@1234"
+}
+
+### Đăng nhập
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@smarthub.local",
+  "password": "Admin@1234"
+}
+
+### Lấy dữ liệu cảm biến (thay TOKEN bằng token từ login)
+GET http://localhost:3000/api/sensors/latest
+Authorization: Bearer TOKEN
+
+### Bật relay 0
+POST http://localhost:3000/api/relays/0
+Authorization: Bearer TOKEN
+Content-Type: application/json
+
+{
+  "state": true
+}
+
+### Lấy danh sách relay
+GET http://localhost:3000/api/relays
+Authorization: Bearer TOKEN

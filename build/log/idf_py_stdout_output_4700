@@ -1,0 +1,22 @@
+Command: ninja all
+[1/1086] Generating project_elf_src_esp32c6.c
+[2/1086] Generating D:/projects/smart_home_project/build/esp-idf/esp_system/ld/memory.ld linker script...
+[3/1086] Generating D:/projects/smart_home_project/build/esp-idf/esp_system/ld/sections.ld.in linker script...
+[4/1086] Generating ../../partition_table/partition-table.bin
+FAILED: partition_table/partition-table.bin D:/projects/smart_home_project/build/partition_table/partition-table.bin 
+C:\Windows\system32\cmd.exe /C "cd /D D:\projects\smart_home_project\build\esp-idf\partition_table && D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/App/esp_idf/Espressif/frameworks/esp-idf-v5.5.2/components/partition_table/gen_esp32part.py -q --offset 0x8000 --primary-bootloader-offset 0x0 --flash-size 2MB -- D:/projects/smart_home_project/partitions.csv D:/projects/smart_home_project/build/partition_table/partition-table.bin && D:\App\esp_idf\Espressif\tools\cmake\3.30.2\bin\cmake.exe -E echo "Partition table binary generated. Contents:" && D:\App\esp_idf\Espressif\tools\cmake\3.30.2\bin\cmake.exe -E echo ******************************************************************************* && D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:/App/esp_idf/Espressif/frameworks/esp-idf-v5.5.2/components/partition_table/gen_esp32part.py -q --offset 0x8000 --primary-bootloader-offset 0x0 --flash-size 2MB -- D:/projects/smart_home_project/build/partition_table/partition-table.bin && D:\App\esp_idf\Espressif\tools\cmake\3.30.2\bin\cmake.exe -E echo *******************************************************************************"
+Partitions tables occupies 3.1MB of flash (3211264 bytes) which does not fit in configured flash size 2MB. Change the flash size in menuconfig under the 'Serial Flasher Config' menu.
+[5/1086] Building C object esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_header.c.obj
+[6/1086] Building C object esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_utils.c.obj
+[7/1086] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_sess.c.obj
+[8/1086] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_parse.c.obj
+[9/1086] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/util/ctrl_sock.c.obj
+[10/1086] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_main.c.obj
+[11/1086] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_txrx.c.obj
+[12/1086] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_uri.c.obj
+[13/1086] Building C object esp-idf/esp_https_ota/CMakeFiles/__idf_esp_https_ota.dir/src/esp_https_ota.c.obj
+[14/1086] Building C object esp-idf/esp_http_server/CMakeFiles/__idf_esp_http_server.dir/src/httpd_ws.c.obj
+[15/1086] Building C object esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/lib/http_auth.c.obj
+[16/1086] Building C object esp-idf/tcp_transport/CMakeFiles/__idf_tcp_transport.dir/transport.c.obj
+[17/1086] Building C object esp-idf/esp_http_client/CMakeFiles/__idf_esp_http_client.dir/esp_http_client.c.obj
+ninja: build stopped: subcommand failed.

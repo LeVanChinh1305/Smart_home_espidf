@@ -18,7 +18,7 @@ set(HEAD_HASH)
 file(READ "D:/projects/smart_home_project/build/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
-set(GIT_DIR "D:/App/esp_idf/Espressif/frameworks/esp-idf-v5.5.2/.git")
+set(GIT_DIR "D:/projects/smart_home_project/.git")
 # handle git-worktree
 if(EXISTS "${GIT_DIR}/commondir")
 	file(READ "${GIT_DIR}/commondir" GIT_DIR_NEW LIMIT 1024)

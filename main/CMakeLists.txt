@@ -7,4 +7,6 @@ idf_component_register(
         analog_sensors
         relay
         button
+        wifi_manager
+        mqtt_manager
 )

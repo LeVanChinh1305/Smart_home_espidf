@@ -1,0 +1,2097 @@
+Command: D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace D:\projects\smart_home_project\build\smart_home_project.elf D:\projects\smart_home_project\build\bootloader\bootloader.elf --force-color -m 'D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py' '-p' 'COM5'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x5f (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xec8
+load:0x4086e610,len:0x31c4
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 27 2026 08:51:29[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (25) boot: efuse block revision: v0.2[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (32) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (44) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (72) boot:  3 storage          Unknown data     01 81 00210000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=420c0020 size=263f4h (156660) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0003641c vaddr=40800000 size=09bfch ( 39932) load[0m
+[0;32mI (129) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=bf364h (783204) map[0m
+[0;32mI (278) esp_image: segment 3: paddr=000ff38c vaddr=40809bfc size=1354ch ( 79180) load[0m
+[0;32mI (296) esp_image: segment 4: paddr=001128e0 vaddr=4081d150 size=03914h ( 14612) load[0m
+[0;32mI (300) esp_image: segment 5: paddr=001161fc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (307) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (308) boot: Disabling RNG early entropy source...[0m
+[0;32mI (321) cpu_start: Unicore app[0m
+[0;32mI (330) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (330) cpu_start: Pro cpu start user code[0m
+[0;32mI (330) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (332) app_init: Application information:[0m
+[0;32mI (336) app_init: Project name:     smart_home_project[0m
+[0;32mI (341) app_init: App version:      2449463-dirty[0m
+[0;32mI (345) app_init: Compile time:     Mar 27 2026 08:50:40[0m
+[0;32mI (350) app_init: ELF file SHA256:  b94106e07...[0m
+[0;32mI (355) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (359) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (363) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (367) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (371) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (377) heap_init: At 40826590 len 00056080 (344 KiB): RAM[0m
+[0;32mI (382) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (387) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (393) spi_flash: detected chip: generic[0m
+[0;32mI (396) spi_flash: flash io: dio[0m
+[0;32mI (400) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (406) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (412) coexist: coex firmware version: 7260f71[0m
+[0;32mI (416) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (421) main_task: Started on CPU0[0m
+[0;32mI (441) main_task: Calling app_main()[0m
+[0;32mI (441) SMART_HOME_MAIN: Khởi động Smart Home Firmware...[0m
+[0;32mI (541) ANALOG_MGR: Analog Sensors (Gas & Light) initialized successfully.[0m
+[0;32mI (541) BUTTON_COMPONENT: Đã khởi tạo xong nút nhấn tại GPIO 3[0m
+[0;32mI (541) BUTTON_COMPONENT: Đã khởi tạo xong nút nhấn tại GPIO 9[0m
+[0;32mI (581) rc522: PCD (fw=unknown) initialized[0m
+[0;32mI (581) WIFI_MANAGER: Initializing WiFi...[0m
+[0;32mI (591) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (591) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (601) wifi:wifi driver task: 4082f104, prio:23, stack:6656, core=0[0m
+[0;32mI (601) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (601) wifi:wifi certification version: v7.0[0m
+[0;32mI (601) wifi:config NVS flash: enabled[0m
+[0;32mI (601) wifi:config nano formatting: disabled[0m
+[0;32mI (611) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (611) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (621) wifi:Init management short buffer num: 32[0m
+[0;32mI (631) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (631) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (631) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (641) wifi:Init static rx buffer num: 10[0m
+[0;32mI (641) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (651) wifi_init: rx ba win: 6[0m
+[0;32mI (651) wifi_init: accept mbox: 6[0m
+[0;32mI (651) wifi_init: tcpip mbox: 32[0m
+[0;32mI (661) wifi_init: udp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp mbox: 6[0m
+[0;32mI (661) wifi_init: tcp tx win: 5760[0m
+[0;32mI (671) wifi_init: tcp rx win: 5760[0m
+[0;32mI (671) wifi_init: tcp mss: 1440[0m
+[0;32mI (671) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (681) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (681) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (681) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (691) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (761) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (761) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (771) wifi:(agc)0x600a7128:0xd20b0a06, min.avgNF:0xce->0xd2(dB), RCalCount:0xb0, min.RRssi:0xa06(-95.62)[0m
+[0;32mI (781) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (781) wifi:mode : sta (54:32:04:0c:fb:e4)[0m
+[0;32mI (791) wifi:enable tsf[0m
+[0;32mI (791) WIFI_MANAGER: Connecting to WiFi...[0m
+[0;32mI (801) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (801) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (811) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (821) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (831) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (831) wifi:(trc)phytype:CBW20-SGI, snr:42, maxRate:144, highestRateIdx:0[0m
+[0;33mW (831) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (841) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:42, ampduState:wait operational[0m
+[0;32mI (851) wifi:ifidx:0, rssi:-55, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (861) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:0(no restriction)[0m
+[0;32mI (1201) wifi:connected with 509 TQV, aid = 4, channel 11, BW20, bssid = a8:15:4d:e2:2c:78[0m
+[0;32mI (1201) wifi:security: WPA2-PSK, phy:bgn, rssi:-55, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1201) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1211) wifi:pm start, type:1, aid:0x4, trans-BSSID:a8:15:4d:e2:2c:78, BSSID[5]:0x78, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1221) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1231) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1231) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1251) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1261) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1271) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1281) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1291) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;33mW (1291) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100782c, TALO:0xe24d15a8, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (1301) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (2311) esp_netif_handlers: sta ip: 192.168.83.115, mask: 255.255.255.0, gw: 192.168.83.1[0m
+[0;32mI (2311) WIFI_MANAGER: Connected successfully! Got IP: 192.168.83.115[0m
+[0;32mI (2821) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (2821) SMART_HOME_MAIN: Task MQTT Telemetry đã sẵn sàng.[0m
+[0;32mI (2821) main_task: Returned from app_main()[0m
+[0;32mI (3451) MQTT_MANAGER: 🟢 Đã kết nối tới MQTT Broker![0m
+[0;32mI (3451) MQTT_MANAGER: Đã Subscribe topic: smarthub/chinh/control[0m
+[0;32mI (4841) LIGHT: Độ sáng: 49.6%[0m
+[0;32mI (4841) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (6841) LIGHT: Độ sáng: 41.8%[0m
+[0;32mI (6861) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (7821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":41.8, "r1":0, "r2":0}[0m
+[0;32mI (8841) LIGHT: Độ sáng: 30.4%[0m
+[0;32mI (8881) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (8881) rc522: rc522_picc_send(86): [0m
+[0;32mI (10841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (10901) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (12821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (12841) LIGHT: Độ sáng: 94.9%[0m
+[0;32mI (12921) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (14841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (14941) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (16841) LIGHT: Độ sáng: 84.8%[0m
+[0;32mI (16961) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (17821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":206, "light":84.8, "r1":0, "r2":0}[0m
+[0;32mI (18841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (18981) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (20841) LIGHT: Độ sáng: 84.8%[0m
+[0;32mI (21001) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (22821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":84.8, "r1":0, "r2":0}[0m
+[0;32mI (22841) LIGHT: Độ sáng: 17.9%[0m
+[0;32mI (23021) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (24841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (25041) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (26841) LIGHT: Độ sáng: 97.7%[0m
+[0;32mI (27061) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (27821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":97.7, "r1":0, "r2":0}[0m
+[0;32mI (28841) LIGHT: Độ sáng: 28.9%[0m
+[0;32mI (29081) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (30841) LIGHT: Độ sáng: 53.9%[0m
+[0;32mI (31101) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (32821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":53.9, "r1":0, "r2":0}[0m
+[0;32mI (32841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (33121) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (33121) rc522: rc522_picc_send(86): [0m
+[0;32mI (34841) LIGHT: Độ sáng: 92.2%[0m
+[0;32mI (35141) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (36841) LIGHT: Độ sáng: 16.8%[0m
+[0;32mI (37161) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (37821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":16.8, "r1":0, "r2":0}[0m
+[0;32mI (38841) LIGHT: Độ sáng: 80.8%[0m
+[0;32mI (39181) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (40841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (41201) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (42821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (42841) LIGHT: Độ sáng: 85.5%[0m
+[0;32mI (43221) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (44841) LIGHT: Độ sáng: 37.9%[0m
+[0;32mI (45241) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (46841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (47261) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (47821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (48841) LIGHT: Độ sáng: 97.2%[0m
+[0;32mI (49281) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (50841) LIGHT: Độ sáng: 46.1%[0m
+[0;32mI (51301) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (52821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":46.1, "r1":0, "r2":0}[0m
+[0;32mI (52841) LIGHT: Độ sáng: 39.0%[0m
+[0;32mI (53321) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (54841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (55341) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (56841) LIGHT: Độ sáng: 92.6%[0m
+[0;32mI (57361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (57821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":92.6, "r1":0, "r2":0}[0m
+[0;32mI (58841) LIGHT: Độ sáng: 19.1%[0m
+[0;32mI (59381) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (60841) LIGHT: Độ sáng: 78.5%[0m
+[0;32mI (61401) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (62821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":78.5, "r1":0, "r2":0}[0m
+[0;32mI (62841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (63421) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (64841) LIGHT: Độ sáng: 75.8%[0m
+[0;32mI (65441) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (65441) rc522: rc522_picc_send(86): [0m
+[0;32mI (66841) LIGHT: Độ sáng: 21.5%[0m
+[0;32mI (67461) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (67821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":21.5, "r1":0, "r2":0}[0m
+[0;32mI (68841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (69481) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (70841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (71501) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (71501) rc522: rc522_picc_send(86): [0m
+[0;32mI (72821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":98.0, "r1":0, "r2":0}[0m
+[0;32mI (72841) LIGHT: Độ sáng: 48.4%[0m
+[0;32mI (73521) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (74841) LIGHT: Độ sáng: 24.6%[0m
+[0;32mI (75541) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (76841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (77561) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (77821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (78841) LIGHT: Độ sáng: 91.8%[0m
+[0;32mI (79581) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (79581) rc522: rc522_picc_send(86): [0m
+[0;32mI (80841) LIGHT: Độ sáng: 18.7%[0m
+[0;32mI (81601) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (82821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":18.7, "r1":0, "r2":0}[0m
+[0;32mI (82841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (83621) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (84841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (85641) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (86841) LIGHT: Độ sáng: 47.3%[0m
+[0;32mI (87661) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (87821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":47.3, "r1":0, "r2":0}[0m
+[0;32mI (88841) LIGHT: Độ sáng: 39.4%[0m
+[0;32mI (89681) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (90841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (91701) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (92821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (92841) LIGHT: Độ sáng: 92.6%[0m
+[0;32mI (93721) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (93721) rc522: rc522_picc_send(86): [0m
+[0;32mI (94841) LIGHT: Độ sáng: 25.7%[0m
+[0;32mI (95741) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (96841) LIGHT: Độ sáng: 75.4%[0m
+[0;32mI (97761) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (97821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":75.4, "r1":0, "r2":0}[0m
+[0;32mI (98841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (99781) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (100841) LIGHT: Độ sáng: 89.1%[0m
+[0;32mI (101801) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (101801) rc522: rc522_picc_send(86): [0m
+[0;32mI (102821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":89.1, "r1":0, "r2":0}[0m
+[0;32mI (102841) LIGHT: Độ sáng: 38.2%[0m
+[0;32mI (103821) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (104841) LIGHT: Độ sáng: 80.4%[0m
+[0;32mI (105841) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (106841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (107821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":99.2, "r1":0, "r2":0}[0m
+[0;32mI (107861) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (108841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (109881) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (109881) rc522: rc522_picc_send(86): [0m
+[0;32mI (110841) LIGHT: Độ sáng: 16.4%[0m
+[0;32mI (111901) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (112821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":16.4, "r1":0, "r2":0}[0m
+[0;32mI (112841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (113921) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (114841) LIGHT: Độ sáng: 98.4%[0m
+[0;32mI (115941) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (115941) rc522: rc522_picc_send(86): [0m
+[0;32mI (116841) LIGHT: Độ sáng: 30.8%[0m
+[0;32mI (117821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":30.8, "r1":0, "r2":0}[0m
+[0;32mI (117961) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (118841) LIGHT: Độ sáng: 78.1%[0m
+[0;32mI (119981) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (120841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (122001) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (122821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (122841) LIGHT: Độ sáng: 45.7%[0m
+[0;32mI (124021) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (124021) rc522: rc522_picc_send(86): [0m
+[0;32mI (124841) LIGHT: Độ sáng: 42.2%[0m
+[0;32mI (126041) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (126841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (127821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (128061) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (128841) LIGHT: Độ sáng: 85.2%[0m
+[0;32mI (130081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (130841) LIGHT: Độ sáng: 21.5%[0m
+[0;32mI (132101) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (132101) rc522: rc522_picc_send(86): [0m
+[0;32mI (132821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":21.5, "r1":0, "r2":0}[0m
+[0;32mI (132841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (134121) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (134841) LIGHT: Độ sáng: 97.3%[0m
+[0;32mI (136141) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (136841) LIGHT: Độ sáng: 28.9%[0m
+[0;32mI (137821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":28.9, "r1":0, "r2":0}[0m
+[0;32mI (138161) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (138161) rc522: rc522_picc_send(86): [0m
+[0;32mI (138841) LIGHT: Độ sáng: 54.7%[0m
+[0;32mI (140181) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (140841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (142201) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (142821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (142841) LIGHT: Độ sáng: 90.6%[0m
+[0;32mI (144221) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (144841) LIGHT: Độ sáng: 17.9%[0m
+[0;32mI (146241) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (146241) rc522: rc522_picc_send(86): [0m
+[0;32mI (146841) LIGHT: Độ sáng: 48.0%[0m
+[0;32mI (147821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":48.0, "r1":0, "r2":0}[0m
+[0;32mI (148261) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (148841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (150281) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (150841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (152301) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (152301) rc522: rc522_picc_send(86): [0m
+[0;32mI (152821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":99.2, "r1":0, "r2":0}[0m
+[0;32mI (152841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (154321) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (154841) LIGHT: Độ sáng: 34.7%[0m
+[0;32mI (156341) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (156841) LIGHT: Độ sáng: 19.5%[0m
+[0;32mI (157821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":19.5, "r1":0, "r2":0}[0m
+[0;32mI (158361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (158841) LIGHT: Độ sáng: 94.5%[0m
+[0;32mI (160381) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (160841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (162401) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (162821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (162841) LIGHT: Độ sáng: 94.5%[0m
+[0;32mI (164421) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (164841) LIGHT: Độ sáng: 39.4%[0m
+[0;32mI (166441) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (166841) LIGHT: Độ sáng: 42.5%[0m
+[0;32mI (167821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":42.5, "r1":0, "r2":0}[0m
+[0;32mI (168461) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (168461) rc522: rc522_picc_send(86): [0m
+[0;32mI (168841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (170481) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (170841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (172501) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (172821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":98.0, "r1":0, "r2":0}[0m
+[0;32mI (172841) LIGHT: Độ sáng: 44.5%[0m
+[0;32mI (174521) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (174841) LIGHT: Độ sáng: 33.6%[0m
+[0;32mI (176541) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (176841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (177821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (178561) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (178841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (180581) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (180841) LIGHT: Độ sáng: 27.3%[0m
+[0;32mI (182601) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (182601) rc522: rc522_picc_send(86): [0m
+[0;32mI (182821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":27.3, "r1":0, "r2":0}[0m
+[0;32mI (182841) LIGHT: Độ sáng: 63.7%[0m
+[0;32mI (184621) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (184841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (186641) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (186841) LIGHT: Độ sáng: 89.4%[0m
+[0;32mI (187821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":89.4, "r1":0, "r2":0}[0m
+[0;32mI (188661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (188841) LIGHT: Độ sáng: 16.0%[0m
+[0;32mI (190681) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (190841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (192701) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (192821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (192841) LIGHT: Độ sáng: 98.4%[0m
+[0;32mI (194721) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (194841) LIGHT: Độ sáng: 28.9%[0m
+[0;32mI (196741) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (196841) LIGHT: Độ sáng: 68.4%[0m
+[0;32mI (197821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":68.4, "r1":0, "r2":0}[0m
+[0;32mI (198761) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (198841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (200781) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (200841) LIGHT: Độ sáng: 80.9%[0m
+[0;32mI (202801) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (202821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":80.9, "r1":0, "r2":0}[0m
+[0;32mI (202841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (204821) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (204821) rc522: rc522_picc_send(86): [0m
+[0;32mI (204841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (206841) LIGHT: Độ sáng: 68.7%[0m
+[0;32mI (206841) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (207821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":68.7, "r1":0, "r2":0}[0m
+[0;32mI (208841) LIGHT: Độ sáng: 44.9%[0m
+[0;32mI (208861) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (210841) LIGHT: Độ sáng: 25.3%[0m
+[0;32mI (210881) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (210881) rc522: rc522_picc_send(86): [0m
+[0;32mI (212821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":25.3, "r1":0, "r2":0}[0m
+[0;32mI (212841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (212901) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (214841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (214921) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (216841) LIGHT: Độ sáng: 78.5%[0m
+[0;32mI (216941) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (217821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":78.5, "r1":0, "r2":0}[0m
+[0;32mI (218841) LIGHT: Độ sáng: 22.6%[0m
+[0;32mI (218961) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (220841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (220981) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (222821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (222841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (223001) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (224841) LIGHT: Độ sáng: 80.9%[0m
+[0;32mI (225021) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (226841) LIGHT: Độ sáng: 22.2%[0m
+[0;32mI (227041) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (227041) rc522: rc522_picc_send(86): [0m
+[0;32mI (227821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":22.2, "r1":0, "r2":0}[0m
+[0;32mI (228841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (229061) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (230841) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (231081) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (232821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":221, "light":97.6, "r1":0, "r2":0}[0m
+[0;32mI (232841) LIGHT: Độ sáng: 53.9%[0m
+[0;32mI (233101) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (234841) LIGHT: Độ sáng: 26.9%[0m
+[0;32mI (235121) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (236841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (237141) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (237821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (238841) LIGHT: Độ sáng: 91.8%[0m
+[0;32mI (239161) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (240841) LIGHT: Độ sáng: 23.0%[0m
+[0;32mI (241181) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (242821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":23.0, "r1":0, "r2":0}[0m
+[0;32mI (242841) LIGHT: Độ sáng: 84.8%[0m
+[0;32mI (243201) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (244841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (245221) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (246841) LIGHT: Độ sáng: 82.8%[0m
+[0;32mI (247241) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (247821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":82.8, "r1":0, "r2":0}[0m
+[0;32mI (248841) LIGHT: Độ sáng: 25.3%[0m
+[0;32mI (249261) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (249261) rc522: rc522_picc_send(86): [0m
+[0;32mI (250841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (251281) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (252821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (252841) LIGHT: Độ sáng: 94.5%[0m
+[0;32mI (253301) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (254841) LIGHT: Độ sáng: 42.5%[0m
+[0;32mI (255321) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (256841) LIGHT: Độ sáng: 38.7%[0m
+[0;32mI (257341) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (257341) rc522: rc522_picc_send(86): [0m
+[0;32mI (257821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":38.7, "r1":0, "r2":0}[0m
+[0;32mI (258841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (259361) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (260841) LIGHT: Độ sáng: 91.0%[0m
+[0;32mI (261381) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (262821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":91.0, "r1":0, "r2":0}[0m
+[0;32mI (262841) LIGHT: Độ sáng: 22.2%[0m
+[0;32mI (263401) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (264841) LIGHT: Độ sáng: 84.3%[0m
+[0;32mI (265421) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (266841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (267441) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (267821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":206, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (268841) LIGHT: Độ sáng: 78.9%[0m
+[0;32mI (269461) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (270841) LIGHT: Độ sáng: 25.7%[0m
+[0;32mI (271481) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (271481) rc522: rc522_picc_send(86): [0m
+[0;32mI (272821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":25.7, "r1":0, "r2":0}[0m
+[0;32mI (272841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (273501) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (274841) LIGHT: Độ sáng: 89.8%[0m
+[0;32mI (275521) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (276841) LIGHT: Độ sáng: 21.1%[0m
+[0;32mI (277541) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (277821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":21.1, "r1":0, "r2":0}[0m
+[0;32mI (278841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (279561) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (279561) rc522: rc522_picc_send(86): [0m
+[0;32mI (280841) LIGHT: Độ sáng: 91.4%[0m
+[0;32mI (281581) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (282821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":91.4, "r1":0, "r2":0}[0m
+[0;32mI (282841) LIGHT: Độ sáng: 22.2%[0m
+[0;32mI (283601) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (284841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (285621) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (286841) LIGHT: Độ sáng: 91.0%[0m
+[0;32mI (287641) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (287821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":91.0, "r1":0, "r2":0}[0m
+[0;32mI (288841) LIGHT: Độ sáng: 19.5%[0m
+[0;32mI (289661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (290841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (291681) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (292821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (292841) LIGHT: Độ sáng: 80.1%[0m
+[0;32mI (293701) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (293701) rc522: rc522_picc_send(86): [0m
+[0;32mI (294841) LIGHT: Độ sáng: 48.8%[0m
+[0;32mI (295721) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (296841) LIGHT: Độ sáng: 98.4%[0m
+[0;32mI (297741) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (297821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":98.4, "r1":0, "r2":0}[0m
+[0;32mI (298841) LIGHT: Độ sáng: 19.1%[0m
+[0;32mI (299761) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (300841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (301781) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (302821) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (302841) LIGHT: Độ sáng: 89.1%[0m
+[0;32mI (303801) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (304841) LIGHT: Độ sáng: 23.0%[0m
+[0;32mI (305821) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (306841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (307841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":99.2, "r1":0, "r2":0}[0m
+[0;32mI (307841) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (307841) rc522: rc522_picc_send(86): [0m
+[0;32mI (308841) LIGHT: Độ sáng: 32.8%[0m
+[0;32mI (309861) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (310841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (311881) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (312841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (312841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (313901) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (314841) LIGHT: Độ sáng: 25.8%[0m
+[0;32mI (315921) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (315921) rc522: rc522_picc_send(86): [0m
+[0;32mI (316841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (317841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (317941) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (318841) LIGHT: Độ sáng: 71.5%[0m
+[0;32mI (319961) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (320841) LIGHT: Độ sáng: 59.4%[0m
+[0;32mI (321981) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (322841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":59.4, "r1":0, "r2":0}[0m
+[0;32mI (322841) LIGHT: Độ sáng: 96.8%[0m
+[0;32mI (324001) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (324001) rc522: rc522_picc_send(86): [0m
+[0;32mI (324841) LIGHT: Độ sáng: 38.2%[0m
+[0;32mI (326021) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (326841) LIGHT: Độ sáng: 87.9%[0m
+[0;32mI (327841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":87.9, "r1":0, "r2":0}[0m
+[0;32mI (328041) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (328841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (330061) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (330061) rc522: rc522_picc_send(86): [0m
+[0;32mI (330841) LIGHT: Độ sáng: 26.2%[0m
+[0;32mI (332081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (332841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":26.2, "r1":0, "r2":0}[0m
+[0;32mI (332841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (334101) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (334841) LIGHT: Độ sáng: 98.4%[0m
+[0;32mI (336121) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (336841) LIGHT: Độ sáng: 27.3%[0m
+[0;32mI (337841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":27.3, "r1":0, "r2":0}[0m
+[0;32mI (338141) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (338841) LIGHT: Độ sáng: 78.5%[0m
+[0;32mI (340161) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (340841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (342181) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (342841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":98.8, "r1":0, "r2":0}[0m
+[0;32mI (342841) LIGHT: Độ sáng: 23.4%[0m
+[0;32mI (344201) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (344841) LIGHT: Độ sáng: 71.1%[0m
+[0;32mI (346221) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (346221) rc522: rc522_picc_send(86): [0m
+[0;32mI (346841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (347841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (348241) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (348841) LIGHT: Độ sáng: 76.2%[0m
+[0;32mI (350261) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (350841) LIGHT: Độ sáng: 26.2%[0m
+[0;32mI (352281) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (352841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":26.2, "r1":0, "r2":0}[0m
+[0;32mI (352841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (354301) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (354841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (356321) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (356841) LIGHT: Độ sáng: 31.2%[0m
+[0;32mI (357841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":31.2, "r1":0, "r2":0}[0m
+[0;32mI (358341) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (358841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (360361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (360841) LIGHT: Độ sáng: 87.1%[0m
+[0;32mI (362381) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (362841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":87.1, "r1":0, "r2":0}[0m
+[0;32mI (362841) LIGHT: Độ sáng: 83.6%[0m
+[0;32mI (364401) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (364841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (366421) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (366841) LIGHT: Độ sáng: 24.6%[0m
+[0;32mI (367841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":24.6, "r1":0, "r2":0}[0m
+[0;32mI (368441) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (368441) rc522: rc522_picc_send(86): [0m
+[0;32mI (368841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (370461) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (370841) LIGHT: Độ sáng: 47.2%[0m
+[0;32mI (372481) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (372841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (372841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":47.2, "r1":0, "r2":0}[0m
+[0;32mI (374501) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (374501) rc522: rc522_picc_send(86): [0m
+[0;32mI (374841) LIGHT: Độ sáng: 87.9%[0m
+[0;32mI (376521) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (376841) LIGHT: Độ sáng: 44.9%[0m
+[0;32mI (377841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":44.9, "r1":0, "r2":0}[0m
+[0;32mI (378541) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (378841) LIGHT: Độ sáng: 97.2%[0m
+[0;32mI (380561) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (380841) LIGHT: Độ sáng: 17.1%[0m
+[0;32mI (382581) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (382841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":17.1, "r1":0, "r2":0}[0m
+[0;32mI (382841) LIGHT: Độ sáng: 97.2%[0m
+[0;32mI (384601) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (384841) LIGHT: Độ sáng: 16.4%[0m
+[0;32mI (386621) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (386841) LIGHT: Độ sáng: 98.4%[0m
+[0;32mI (387841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":98.4, "r1":0, "r2":0}[0m
+[0;32mI (388641) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (388641) rc522: rc522_picc_send(86): [0m
+[0;32mI (388841) LIGHT: Độ sáng: 26.1%[0m
+[0;32mI (390661) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (390841) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (392681) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (392841) LIGHT: Độ sáng: 70.3%[0m
+[0;32mI (392841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":97.6, "r1":0, "r2":0}[0m
+[0;32mI (394701) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (394841) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (396721) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (396721) rc522: rc522_picc_send(86): [0m
+[0;32mI (396841) LIGHT: Độ sáng: 23.4%[0m
+[0;32mI (397841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":23.4, "r1":0, "r2":0}[0m
+[0;32mI (398741) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (398841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (400761) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (400841) LIGHT: Độ sáng: 50.4%[0m
+[0;32mI (402781) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (402841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":50.4, "r1":0, "r2":0}[0m
+[0;32mI (402841) LIGHT: Độ sáng: 79.3%[0m
+[0;32mI (404801) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (404841) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (406821) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (406841) LIGHT: Độ sáng: 69.5%[0m
+[0;32mI (407841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":205, "light":69.5, "r1":0, "r2":0}[0m
+[0;32mI (408841) LIGHT: Độ sáng: 96.9%[0m
+[0;32mI (408841) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (410841) LIGHT: Độ sáng: 30.8%[0m
+[0;32mI (410861) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (410861) rc522: rc522_picc_send(86): [0m
+[0;32mI (412841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":30.8, "r1":0, "r2":0}[0m
+[0;32mI (412841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (412881) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (414841) LIGHT: Độ sáng: 19.1%[0m
+[0;32mI (414901) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (416841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (416921) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (417841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (418841) LIGHT: Độ sáng: 16.0%[0m
+[0;32mI (418941) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (420841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (420961) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (422841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (422841) LIGHT: Độ sáng: 17.2%[0m
+[0;32mI (422981) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (424841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (425001) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (426841) LIGHT: Độ sáng: 19.1%[0m
+[0;32mI (427021) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (427841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":19.1, "r1":0, "r2":0}[0m
+[0;32mI (428841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (429041) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (430841) LIGHT: Độ sáng: 25.3%[0m
+[0;32mI (431061) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (432841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":25.3, "r1":0, "r2":0}[0m
+[0;32mI (432841) LIGHT: Độ sáng: 87.9%[0m
+[0;32mI (433081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (434841) LIGHT: Độ sáng: 72.6%[0m
+[0;32mI (435101) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (435101) rc522: rc522_picc_send(86): [0m
+[0;32mI (436841) LIGHT: Độ sáng: 89.0%[0m
+[0;32mI (437121) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (437841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":89.0, "r1":0, "r2":0}[0m
+[0;32mI (438841) LIGHT: Độ sáng: 78.9%[0m
+[0;32mI (439141) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (440841) LIGHT: Độ sáng: 88.3%[0m
+[0;32mI (441161) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (441161) rc522: rc522_picc_send(86): [0m
+[0;32mI (442841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (442841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":88.3, "r1":0, "r2":0}[0m
+[0;32mI (443181) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (444841) LIGHT: Độ sáng: 94.5%[0m
+[0;32mI (445201) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (446841) LIGHT: Độ sáng: 23.8%[0m
+[0;32mI (447221) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (447221) rc522: rc522_picc_send(86): [0m
+[0;32mI (447841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":23.8, "r1":0, "r2":0}[0m
+[0;32mI (448841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (449241) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (450841) LIGHT: Độ sáng: 16.8%[0m
+[0;32mI (451261) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (452841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":16.8, "r1":0, "r2":0}[0m
+[0;32mI (452841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (453281) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (454841) LIGHT: Độ sáng: 50.0%[0m
+[0;32mI (455301) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (455301) rc522: rc522_picc_send(86): [0m
+[0;32mI (456841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (457321) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (457841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (458841) LIGHT: Độ sáng: 87.9%[0m
+[0;32mI (459341) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (460841) LIGHT: Độ sáng: 51.9%[0m
+[0;32mI (461361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (462841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":51.9, "r1":0, "r2":0}[0m
+[0;32mI (462841) LIGHT: Độ sáng: 91.4%[0m
+[0;32mI (463381) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (463381) rc522: rc522_picc_send(86): [0m
+[0;32mI (464841) LIGHT: Độ sáng: 34.4%[0m
+[0;32mI (465401) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (466841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (467421) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (467841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":206, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (468841) LIGHT: Độ sáng: 54.3%[0m
+[0;32mI (469441) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (470841) LIGHT: Độ sáng: 87.5%[0m
+[0;32mI (471461) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (471461) rc522: rc522_picc_send(86): [0m
+[0;32mI (472841) LIGHT: Độ sáng: 90.6%[0m
+[0;32mI (472841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":87.5, "r1":0, "r2":0}[0m
+[0;32mI (473481) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (474841) LIGHT: Độ sáng: 21.1%[0m
+[0;32mI (475501) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (476841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (477521) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (477841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (478841) LIGHT: Độ sáng: 85.5%[0m
+[0;32mI (479541) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (480841) LIGHT: Độ sáng: 34.7%[0m
+[0;32mI (481561) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (482841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":34.7, "r1":0, "r2":0}[0m
+[0;32mI (482841) LIGHT: Độ sáng: 97.2%[0m
+[0;32mI (483581) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (484841) LIGHT: Độ sáng: 35.1%[0m
+[0;32mI (485601) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (485601) rc522: rc522_picc_send(86): [0m
+[0;32mI (486841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (487621) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (487841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (488841) LIGHT: Độ sáng: 91.4%[0m
+[0;32mI (489641) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (490841) LIGHT: Độ sáng: 23.0%[0m
+[0;32mI (491661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (492841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":23.0, "r1":0, "r2":0}[0m
+[0;32mI (492841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (493681) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (493681) rc522: rc522_picc_send(86): [0m
+[0;32mI (494841) LIGHT: Độ sáng: 39.8%[0m
+[0;32mI (495701) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (496841) LIGHT: Độ sáng: 97.3%[0m
+[0;32mI (497721) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (497841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":97.3, "r1":0, "r2":0}[0m
+[0;32mI (498841) LIGHT: Độ sáng: 90.2%[0m
+[0;32mI (499741) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (500841) LIGHT: Độ sáng: 41.8%[0m
+[0;32mI (501761) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (501761) rc522: rc522_picc_send(86): [0m
+[0;32mI (502841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":41.8, "r1":0, "r2":0}[0m
+[0;32mI (502841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (503781) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (504841) LIGHT: Độ sáng: 36.3%[0m
+[0;32mI (505801) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (506841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (507821) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (507841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (508841) LIGHT: Độ sáng: 93.4%[0m
+[0;32mI (509841) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (510841) LIGHT: Độ sáng: 32.0%[0m
+[0;32mI (511861) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (512841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":32.0, "r1":0, "r2":0}[0m
+[0;32mI (512841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (513881) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (514841) LIGHT: Độ sáng: 44.1%[0m
+[0;32mI (515901) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (515901) rc522: rc522_picc_send(86): [0m
+[0;32mI (516841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (517841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (517921) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (518841) LIGHT: Độ sáng: 89.5%[0m
+[0;32mI (519941) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (520841) LIGHT: Độ sáng: 34.4%[0m
+[0;32mI (521961) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (521961) rc522: rc522_picc_send(86): [0m
+[0;32mI (522841) LIGHT: Độ sáng: 94.5%[0m
+[0;32mI (522841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":34.4, "r1":0, "r2":0}[0m
+[0;32mI (523981) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (524841) LIGHT: Độ sáng: 22.2%[0m
+[0;32mI (526001) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (526841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (527841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (528021) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (528841) LIGHT: Độ sáng: 31.6%[0m
+[0;32mI (530041) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (530041) rc522: rc522_picc_send(86): [0m
+[0;32mI (530841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (532061) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (532841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (532841) LIGHT: Độ sáng: 46.1%[0m
+[0;32mI (534081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (534841) LIGHT: Độ sáng: 95.7%[0m
+[0;32mI (536101) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (536841) LIGHT: Độ sáng: 94.1%[0m
+[0;32mI (537841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":94.1, "r1":0, "r2":0}[0m
+[0;32mI (538121) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (538121) rc522: rc522_picc_send(86): [0m
+[0;32mI (538841) LIGHT: Độ sáng: 24.6%[0m
+[0;32mI (540141) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (540841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (542161) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (542841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (542841) LIGHT: Độ sáng: 20.7%[0m
+[0;32mI (544181) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (544181) rc522: rc522_picc_send(86): [0m
+[0;32mI (544841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (546201) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (546841) LIGHT: Độ sáng: 32.0%[0m
+[0;32mI (547841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":32.0, "r1":0, "r2":0}[0m
+[0;32mI (548221) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (548841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (550241) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (550841) LIGHT: Độ sáng: 63.2%[0m
+[0;32mI (552261) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (552261) rc522: rc522_picc_send(86): [0m
+[0;32mI (552841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (552841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":63.2, "r1":0, "r2":0}[0m
+[0;32mI (554281) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (554841) LIGHT: Độ sáng: 82.4%[0m
+[0;32mI (556301) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (556841) LIGHT: Độ sáng: 95.3%[0m
+[0;32mI (557841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":95.3, "r1":0, "r2":0}[0m
+[0;32mI (558321) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (558841) LIGHT: Độ sáng: 85.1%[0m
+[0;32mI (560341) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (560841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (562361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (562841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":86.7, "r1":0, "r2":0}[0m
+[0;32mI (562841) LIGHT: Độ sáng: 61.7%[0m
+[0;32mI (564381) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (564841) LIGHT: Độ sáng: 86.3%[0m
+[0;32mI (566401) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (566401) rc522: rc522_picc_send(86): [0m
+[0;32mI (566841) LIGHT: Độ sáng: 87.9%[0m
+[0;32mI (567841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":87.9, "r1":0, "r2":0}[0m
+[0;32mI (568421) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (568841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (570441) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (570841) LIGHT: Độ sáng: 87.5%[0m
+[0;32mI (572461) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (572841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (572841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":87.5, "r1":0, "r2":0}[0m
+[0;32mI (574481) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (574481) rc522: rc522_picc_send(86): [0m
+[0;32mI (574841) LIGHT: Độ sáng: 89.5%[0m
+[0;32mI (576501) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (576841) LIGHT: Độ sáng: 79.7%[0m
+[0;32mI (577841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":79.7, "r1":0, "r2":0}[0m
+[0;32mI (578521) DHT11: 31.0°C | 60.0%[0m
+[0;32mI (578841) LIGHT: Độ sáng: 89.0%[0m
+[0;32mI (580541) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (580841) LIGHT: Độ sáng: 76.9%[0m
+[0;32mI (582561) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (582561) rc522: rc522_picc_send(86): [0m
+[0;32mI (582841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":221, "light":76.9, "r1":0, "r2":0}[0m
+[0;32mI (582841) LIGHT: Độ sáng: 75.0%[0m
+[0;32mI (584581) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (584841) LIGHT: Độ sáng: 82.8%[0m
+[0;32mI (586601) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (586841) LIGHT: Độ sáng: 88.6%[0m
+[0;32mI (587841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":88.6, "r1":0, "r2":0}[0m
+[0;32mI (588621) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (588621) rc522: rc522_picc_send(86): [0m
+[0;32mI (588841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (590641) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (590841) LIGHT: Độ sáng: 75.8%[0m
+[0;32mI (592661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (592841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (592841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":75.8, "r1":0, "r2":0}[0m
+[0;32mI (594681) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (594841) LIGHT: Độ sáng: 48.8%[0m
+[0;32mI (596701) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (596701) rc522: rc522_picc_send(86): [0m
+[0;32mI (596841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (597841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (598721) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (598841) LIGHT: Độ sáng: 65.2%[0m
+[0;32mI (600741) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (600841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (602761) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (602841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (602841) LIGHT: Độ sáng: 77.3%[0m
+[0;32mI (604781) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (604781) rc522: rc522_picc_send(86): [0m
+[0;32mI (604841) LIGHT: Độ sáng: 37.9%[0m
+[0;32mI (606801) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (606841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (607841) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":98.8, "r1":0, "r2":0}[0m
+[0;32mI (608821) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (608841) LIGHT: Độ sáng: 26.2%[0m
+[0;32mI (610841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (610841) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (612841) LIGHT: Độ sáng: 93.0%[0m
+[0;32mI (612861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":98.0, "r1":0, "r2":0}[0m
+[0;32mI (612861) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (614841) LIGHT: Độ sáng: 36.3%[0m
+[0;32mI (614881) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (616841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (616901) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (617861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":221, "light":96.1, "r1":0, "r2":0}[0m
+[0;32mI (618841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (618921) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (620841) LIGHT: Độ sáng: 85.9%[0m
+[0;32mI (620941) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (622841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (622861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":19.9, "r1":0, "r2":0}[0m
+[0;32mI (622961) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (624841) LIGHT: Độ sáng: 34.7%[0m
+[0;32mI (624981) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (624981) rc522: rc522_picc_send(86): [0m
+[0;32mI (626841) LIGHT: Độ sáng: 89.8%[0m
+[0;32mI (627001) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (627861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":89.8, "r1":0, "r2":0}[0m
+[0;32mI (628841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (629021) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (630841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (631041) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (632841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (632861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (633061) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (633061) rc522: rc522_picc_send(86): [0m
+[0;32mI (634841) LIGHT: Độ sáng: 96.5%[0m
+[0;32mI (635081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (636841) LIGHT: Độ sáng: 89.5%[0m
+[0;32mI (637101) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (637861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":89.5, "r1":0, "r2":0}[0m
+[0;32mI (638841) LIGHT: Độ sáng: 71.1%[0m
+[0;32mI (639121) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (640841) LIGHT: Độ sáng: 37.5%[0m
+[0;32mI (641141) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (642841) LIGHT: Độ sáng: 20.3%[0m
+[0;32mI (642861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":20.3, "r1":0, "r2":0}[0m
+[0;32mI (643161) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (644841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (645181) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (646841) LIGHT: Độ sáng: 30.4%[0m
+[0;32mI (647201) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (647201) rc522: rc522_picc_send(86): [0m
+[0;32mI (647861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":30.4, "r1":0, "r2":0}[0m
+[0;32mI (648841) LIGHT: Độ sáng: 33.6%[0m
+[0;32mI (649221) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (650841) LIGHT: Độ sáng: 32.8%[0m
+[0;32mI (651241) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (652841) LIGHT: Độ sáng: 41.0%[0m
+[0;32mI (652861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":41.0, "r1":0, "r2":0}[0m
+[0;32mI (653261) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (654841) LIGHT: Độ sáng: 44.1%[0m
+[0;32mI (655281) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (655281) rc522: rc522_picc_send(86): [0m
+[0;32mI (656841) LIGHT: Độ sáng: 48.0%[0m
+[0;32mI (657301) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (657861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":48.0, "r1":0, "r2":0}[0m
+[0;32mI (658841) LIGHT: Độ sáng: 64.8%[0m
+[0;32mI (659321) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (660841) LIGHT: Độ sáng: 60.5%[0m
+[0;32mI (661341) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (662841) LIGHT: Độ sáng: 69.1%[0m
+[0;32mI (662861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":206, "light":69.1, "r1":0, "r2":0}[0m
+[0;32mI (663361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (664841) LIGHT: Độ sáng: 92.2%[0m
+[0;32mI (665381) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (666841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (667401) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (667861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (668841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (669421) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (670841) LIGHT: Độ sáng: 97.7%[0m
+[0;32mI (671441) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (671441) rc522: rc522_picc_send(86): [0m
+[0;32mI (672841) LIGHT: Độ sáng: 84.7%[0m
+[0;32mI (672861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":84.7, "r1":0, "r2":0}[0m
+[0;32mI (673461) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (674841) LIGHT: Độ sáng: 19.5%[0m
+[0;32mI (675481) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (676841) LIGHT: Độ sáng: 87.1%[0m
+[0;32mI (677501) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (677501) rc522: rc522_picc_send(86): [0m
+[0;32mI (677861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":205, "light":87.1, "r1":0, "r2":0}[0m
+[0;32mI (678841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (679521) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (680841) LIGHT: Độ sáng: 56.6%[0m
+[0;32mI (681541) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (682841) LIGHT: Độ sáng: 57.4%[0m
+[0;32mI (682861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":57.4, "r1":0, "r2":0}[0m
+[0;32mI (683561) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (684841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (685581) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (685581) rc522: rc522_picc_send(86): [0m
+[0;32mI (686841) LIGHT: Độ sáng: 42.1%[0m
+[0;32mI (687601) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (687861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":42.1, "r1":0, "r2":0}[0m
+[0;32mI (688841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (689621) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (690841) LIGHT: Độ sáng: 96.5%[0m
+[0;32mI (691641) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (692841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (692861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":19.9, "r1":0, "r2":0}[0m
+[0;32mI (693661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (694841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (695681) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (696841) LIGHT: Độ sáng: 88.3%[0m
+[0;32mI (697701) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (697861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":88.3, "r1":0, "r2":0}[0m
+[0;32mI (698841) LIGHT: Độ sáng: 37.5%[0m
+[0;32mI (699721) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (699721) rc522: rc522_picc_send(86): [0m
+[0;32mI (700841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (701741) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (702841) LIGHT: Độ sáng: 78.9%[0m
+[0;32mI (702861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":78.9, "r1":0, "r2":0}[0m
+[0;32mI (703761) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (704841) LIGHT: Độ sáng: 28.1%[0m
+[0;32mI (705781) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (706841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (707801) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (707801) rc522: rc522_picc_send(86): [0m
+[0;32mI (707861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (708841) LIGHT: Độ sáng: 93.0%[0m
+[0;32mI (709821) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (710841) LIGHT: Độ sáng: 22.6%[0m
+[0;32mI (711841) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (712841) LIGHT: Độ sáng: 72.2%[0m
+[0;32mI (712861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":72.2, "r1":0, "r2":0}[0m
+[0;32mI (713861) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (714841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (715881) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (716841) LIGHT: Độ sáng: 95.7%[0m
+[0;32mI (717861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":95.7, "r1":0, "r2":0}[0m
+[0;32mI (717901) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (718841) LIGHT: Độ sáng: 40.2%[0m
+[0;32mI (719921) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (720841) LIGHT: Độ sáng: 26.9%[0m
+[0;32mI (721941) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (722841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (722861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (723961) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (724841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (725981) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (726841) LIGHT: Độ sáng: 79.7%[0m
+[0;32mI (727861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":79.7, "r1":0, "r2":0}[0m
+[0;32mI (728001) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (728841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (730021) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (730021) rc522: rc522_picc_send(86): [0m
+[0;32mI (730841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (732041) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (732841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (732861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (734061) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (734841) LIGHT: Độ sáng: 49.2%[0m
+[0;32mI (736081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (736841) LIGHT: Độ sáng: 27.3%[0m
+[0;32mI (737861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":27.3, "r1":0, "r2":0}[0m
+[0;32mI (738101) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (738841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (740121) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (740841) LIGHT: Độ sáng: 93.4%[0m
+[0;32mI (742141) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (742841) LIGHT: Độ sáng: 19.5%[0m
+[0;32mI (742861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":19.5, "r1":0, "r2":0}[0m
+[0;32mI (744161) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (744161) rc522: rc522_picc_send(86): [0m
+[0;32mI (744841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (746181) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (746841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (747861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":99.2, "r1":0, "r2":0}[0m
+[0;32mI (748201) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (748841) LIGHT: Độ sáng: 33.2%[0m
+[0;32mI (750221) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (750841) LIGHT: Độ sáng: 71.5%[0m
+[0;32mI (752241) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (752241) rc522: rc522_picc_send(86): [0m
+[0;32mI (752841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (752861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (754261) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (754841) LIGHT: Độ sáng: 70.7%[0m
+[0;32mI (756281) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (756841) LIGHT: Độ sáng: 32.0%[0m
+[0;32mI (757861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":32.0, "r1":0, "r2":0}[0m
+[0;32mI (758301) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (758841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (760321) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (760841) LIGHT: Độ sáng: 91.0%[0m
+[0;32mI (762341) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (762841) LIGHT: Độ sáng: 22.2%[0m
+[0;32mI (762861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":22.2, "r1":0, "r2":0}[0m
+[0;32mI (764361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (764841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (766381) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (766381) rc522: rc522_picc_send(86): [0m
+[0;32mI (766841) LIGHT: Độ sáng: 96.9%[0m
+[0;32mI (767861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":96.9, "r1":0, "r2":0}[0m
+[0;32mI (768401) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (768841) LIGHT: Độ sáng: 33.6%[0m
+[0;32mI (770421) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (770841) LIGHT: Độ sáng: 66.8%[0m
+[0;32mI (772441) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (772841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (772861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (774461) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (774461) rc522: rc522_picc_send(86): [0m
+[0;32mI (774841) LIGHT: Độ sáng: 87.9%[0m
+[0;32mI (776481) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (776841) LIGHT: Độ sáng: 16.0%[0m
+[0;32mI (777861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":16.0, "r1":0, "r2":0}[0m
+[0;32mI (778501) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (778841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (780521) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (780841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (782541) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (782541) rc522: rc522_picc_send(86): [0m
+[0;32mI (782841) LIGHT: Độ sáng: 88.3%[0m
+[0;32mI (782861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":88.3, "r1":0, "r2":0}[0m
+[0;32mI (784561) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (784841) LIGHT: Độ sáng: 15.6%[0m
+[0;32mI (786581) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (786841) LIGHT: Độ sáng: 90.6%[0m
+[0;32mI (787861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":90.6, "r1":0, "r2":0}[0m
+[0;32mI (788601) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (788601) rc522: rc522_picc_send(86): [0m
+[0;32mI (788841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (790621) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (790841) LIGHT: Độ sáng: 86.3%[0m
+[0;32mI (792641) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (792841) LIGHT: Độ sáng: 16.0%[0m
+[0;32mI (792861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":16.0, "r1":0, "r2":0}[0m
+[0;32mI (794661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (794841) LIGHT: Độ sáng: 94.9%[0m
+[0;32mI (796681) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (796681) rc522: rc522_picc_send(86): [0m
+[0;32mI (796841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (797861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (798701) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (798841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (800721) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (800841) LIGHT: Độ sáng: 23.0%[0m
+[0;32mI (802741) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (802741) rc522: rc522_picc_send(86): [0m
+[0;32mI (802841) LIGHT: Độ sáng: 50.7%[0m
+[0;32mI (802861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":221, "light":50.7, "r1":0, "r2":0}[0m
+[0;32mI (804761) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (804841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (806781) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (806841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (807861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (808801) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (808841) LIGHT: Độ sáng: 91.8%[0m
+[0;32mI (810821) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (810821) rc522: rc522_picc_send(86): [0m
+[0;32mI (810841) LIGHT: Độ sáng: 49.6%[0m
+[0;32mI (812841) LIGHT: Độ sáng: 68.7%[0m
+[0;32mI (812841) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (812861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":68.7, "r1":0, "r2":0}[0m
+[0;32mI (814841) LIGHT: Độ sáng: 29.7%[0m
+[0;32mI (814861) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (816841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (816881) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (816881) rc522: rc522_picc_send(86): [0m
+[0;32mI (817861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (818841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (818901) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (820841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (820921) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (822841) LIGHT: Độ sáng: 96.8%[0m
+[0;32mI (822861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":96.8, "r1":0, "r2":0}[0m
+[0;32mI (822941) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (824841) LIGHT: Độ sáng: 88.6%[0m
+[0;32mI (824961) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (826841) LIGHT: Độ sáng: 65.2%[0m
+[0;32mI (826981) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (827861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":65.2, "r1":0, "r2":0}[0m
+[0;32mI (828841) LIGHT: Độ sáng: 23.8%[0m
+[0;32mI (829001) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (830841) LIGHT: Độ sáng: 16.0%[0m
+[0;32mI (831021) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (832841) LIGHT: Độ sáng: 16.8%[0m
+[0;32mI (832861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":16.8, "r1":0, "r2":0}[0m
+[0;32mI (833041) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (833041) rc522: rc522_picc_send(86): [0m
+[0;32mI (834841) LIGHT: Độ sáng: 49.2%[0m
+[0;32mI (835061) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (836841) LIGHT: Độ sáng: 92.6%[0m
+[0;32mI (837081) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (837861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":221, "light":92.6, "r1":0, "r2":0}[0m
+[0;32mI (838841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (839101) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (840841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (841121) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (841121) rc522: rc522_picc_send(86): [0m
+[0;32mI (842841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (842861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (843141) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (844841) LIGHT: Độ sáng: 98.4%[0m
+[0;32mI (845161) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (846841) LIGHT: Độ sáng: 93.3%[0m
+[0;32mI (847181) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (847861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":93.3, "r1":0, "r2":0}[0m
+[0;32mI (848841) LIGHT: Độ sáng: 79.7%[0m
+[0;32mI (849201) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (850841) LIGHT: Độ sáng: 23.4%[0m
+[0;32mI (851221) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (852841) LIGHT: Độ sáng: 23.0%[0m
+[0;32mI (852861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":23.0, "r1":0, "r2":0}[0m
+[0;32mI (853241) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (854841) LIGHT: Độ sáng: 87.9%[0m
+[0;32mI (855261) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (855261) rc522: rc522_picc_send(86): [0m
+[0;32mI (856841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (857281) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (857861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (858841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (859301) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (860841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (861321) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (862841) LIGHT: Độ sáng: 22.2%[0m
+[0;32mI (862861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":206, "light":22.2, "r1":0, "r2":0}[0m
+[0;32mI (863341) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (863341) rc522: rc522_picc_send(86): [0m
+[0;32mI (864841) LIGHT: Độ sáng: 41.8%[0m
+[0;32mI (865361) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (866841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (867381) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (867861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (868841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (869401) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (870841) LIGHT: Độ sáng: 91.4%[0m
+[0;32mI (871421) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (872841) LIGHT: Độ sáng: 31.6%[0m
+[0;32mI (872861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":31.6, "r1":0, "r2":0}[0m
+[0;32mI (873441) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (874841) LIGHT: Độ sáng: 26.2%[0m
+[0;32mI (875461) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (876841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (877481) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (877481) rc522: rc522_picc_send(86): [0m
+[0;32mI (877861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":205, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (878841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (879501) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (880841) LIGHT: Độ sáng: 90.6%[0m
+[0;32mI (881521) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (882841) LIGHT: Độ sáng: 26.9%[0m
+[0;32mI (882861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":26.9, "r1":0, "r2":0}[0m
+[0;32mI (883541) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (884841) LIGHT: Độ sáng: 33.6%[0m
+[0;32mI (885561) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (885561) rc522: rc522_picc_send(86): [0m
+[0;32mI (886841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (887581) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (887861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (888841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (889601) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (890841) LIGHT: Độ sáng: 86.3%[0m
+[0;32mI (891621) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (892841) LIGHT: Độ sáng: 20.3%[0m
+[0;32mI (892861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":20.3, "r1":0, "r2":0}[0m
+[0;32mI (893641) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (894841) LIGHT: Độ sáng: 38.7%[0m
+[0;32mI (895661) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (896841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (897681) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (897681) rc522: rc522_picc_send(86): [0m
+[0;32mI (897861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (898841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (899701) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (900841) LIGHT: Độ sáng: 87.1%[0m
+[0;32mI (901721) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (902841) LIGHT: Độ sáng: 25.8%[0m
+[0;32mI (902861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":25.8, "r1":0, "r2":0}[0m
+[0;32mI (903741) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (904841) LIGHT: Độ sáng: 24.6%[0m
+[0;32mI (905761) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (905761) rc522: rc522_picc_send(86): [0m
+[0;32mI (906841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (907781) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (907861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":206, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (908841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (909801) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (910841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (911821) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (911821) rc522: rc522_picc_send(86): [0m
+[0;32mI (912841) LIGHT: Độ sáng: 89.1%[0m
+[0;32mI (912861) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":222, "light":89.1, "r1":0, "r2":0}[0m
+[0;32mI (913841) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (914841) LIGHT: Độ sáng: 35.1%[0m
+[0;32mI (915861) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (916841) LIGHT: Độ sáng: 23.8%[0m
+[0;32mI (917881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":222, "light":23.8, "r1":0, "r2":0}[0m
+[0;32mI (917881) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (917881) rc522: rc522_picc_send(86): [0m
+[0;32mI (918841) LIGHT: Độ sáng: 85.9%[0m
+[0;32mI (919901) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (920841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (921921) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (922841) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (922881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":222, "light":97.6, "r1":0, "r2":0}[0m
+[0;32mI (923941) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (924841) LIGHT: Độ sáng: 81.6%[0m
+[0;32mI (925961) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (926841) LIGHT: Độ sáng: 23.0%[0m
+[0;32mI (927881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":237, "light":23.0, "r1":0, "r2":0}[0m
+[0;32mI (927981) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (928841) LIGHT: Độ sáng: 68.7%[0m
+[0;32mI (930001) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (930841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (932021) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (932841) LIGHT: Độ sáng: 95.7%[0m
+[0;32mI (932881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":205, "light":95.7, "r1":0, "r2":0}[0m
+[0;32mI (934041) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (934041) rc522: rc522_picc_send(86): [0m
+[0;32mI (934841) LIGHT: Độ sáng: 36.3%[0m
+[0;32mI (936061) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (936841) LIGHT: Độ sáng: 35.5%[0m
+[0;32mI (937881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":205, "light":35.5, "r1":0, "r2":0}[0m
+[0;32mI (938081) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (938841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (940101) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (940841) LIGHT: Độ sáng: 95.7%[0m
+[0;32mI (942121) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (942121) rc522: rc522_picc_send(86): [0m
+[0;32mI (942841) LIGHT: Độ sáng: 36.7%[0m
+[0;32mI (942881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":238, "light":36.7, "r1":0, "r2":0}[0m
+[0;32mI (944141) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (944841) LIGHT: Độ sáng: 28.5%[0m
+[0;32mI (946161) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (946841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (947881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (948181) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (948841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (950201) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (950201) rc522: rc522_picc_send(86): [0m
+[0;32mI (950841) LIGHT: Độ sáng: 49.2%[0m
+[0;32mI (952221) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (952841) LIGHT: Độ sáng: 26.5%[0m
+[0;32mI (952881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":205, "light":26.5, "r1":0, "r2":0}[0m
+[0;32mI (954241) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (954841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (956261) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (956841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (957881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":206, "light":99.2, "r1":0, "r2":0}[0m
+[0;32mI (958281) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (958841) LIGHT: Độ sáng: 78.9%[0m
+[0;32mI (960301) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (960841) LIGHT: Độ sáng: 20.7%[0m
+[0;32mI (962321) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (962841) LIGHT: Độ sáng: 82.4%[0m
+[0;32mI (962881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":222, "light":82.4, "r1":0, "r2":0}[0m
+[0;32mI (964341) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (964841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (966361) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (966361) rc522: rc522_picc_send(86): [0m
+[0;32mI (966841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (967881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":238, "light":98.8, "r1":0, "r2":0}[0m
+[0;32mI (968381) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (968841) LIGHT: Độ sáng: 86.3%[0m
+[0;32mI (970401) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (970841) LIGHT: Độ sáng: 20.3%[0m
+[0;32mI (972421) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (972421) rc522: rc522_picc_send(86): [0m
+[0;32mI (972841) LIGHT: Độ sáng: 28.5%[0m
+[0;32mI (972881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":206, "light":28.5, "r1":0, "r2":0}[0m
+[0;32mI (974441) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (974841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (976461) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (976841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (977881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (978481) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (978841) LIGHT: Độ sáng: 94.1%[0m
+[0;32mI (980501) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (980501) rc522: rc522_picc_send(86): [0m
+[0;32mI (980841) LIGHT: Độ sáng: 46.1%[0m
+[0;32mI (982521) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (982841) LIGHT: Độ sáng: 22.6%[0m
+[0;32mI (982881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":221, "light":22.6, "r1":0, "r2":0}[0m
+[0;32mI (984541) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (984841) LIGHT: Độ sáng: 95.3%[0m
+[0;32mI (986561) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (986841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (987881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (988581) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (988581) rc522: rc522_picc_send(86): [0m
+[0;32mI (988841) LIGHT: Độ sáng: 96.8%[0m
+[0;32mI (990601) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (990841) LIGHT: Độ sáng: 70.7%[0m
+[0;32mI (992621) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (992841) LIGHT: Độ sáng: 21.5%[0m
+[0;32mI (992881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":237, "light":21.5, "r1":0, "r2":0}[0m
+[0;32mI (994641) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (994841) LIGHT: Độ sáng: 60.1%[0m
+[0;32mI (996661) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (996841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (997881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (998681) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (998841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1000701) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1000841) LIGHT: Độ sáng: 89.1%[0m
+[0;32mI (1002721) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1002841) LIGHT: Độ sáng: 32.0%[0m
+[0;32mI (1002881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":238, "light":32.0, "r1":0, "r2":0}[0m
+[0;32mI (1004741) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1004841) LIGHT: Độ sáng: 21.1%[0m
+[0;32mI (1006761) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1006841) LIGHT: Độ sáng: 93.4%[0m
+[0;32mI (1007881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":238, "light":93.4, "r1":0, "r2":0}[0m
+[0;32mI (1008781) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1008841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1010801) DHT11: 30.0°C | 58.0%[0m
+[1;31mE (1010801) rc522: rc522_picc_send(86): [0m
+[0;32mI (1010841) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (1012821) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1012841) LIGHT: Độ sáng: 80.0%[0m
+[0;32mI (1012881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":221, "light":80.0, "r1":0, "r2":0}[0m
+[0;32mI (1014841) LIGHT: Độ sáng: 43.3%[0m
+[0;32mI (1014841) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1016841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (1016861) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1017881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":206, "light":19.9, "r1":0, "r2":0}[0m
+[0;32mI (1018841) LIGHT: Độ sáng: 87.5%[0m
+[0;32mI (1018881) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1020841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1020901) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1022841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (1022881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":222, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (1022921) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1024841) LIGHT: Độ sáng: 92.6%[0m
+[0;32mI (1024941) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1026841) LIGHT: Độ sáng: 48.4%[0m
+[0;32mI (1026961) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1027881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":58.0, "gas":238, "light":48.4, "r1":0, "r2":0}[0m
+[0;32mI (1028841) LIGHT: Độ sáng: 21.1%[0m
+[0;32mI (1028981) DHT11: 30.0°C | 58.0%[0m
+[0;32mI (1030841) LIGHT: Độ sáng: 70.3%[0m
+[0;32mI (1031001) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1032841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1032881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1033021) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1034841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1035041) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1036841) LIGHT: Độ sáng: 79.3%[0m
+[0;32mI (1037061) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1037881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":79.3, "r1":0, "r2":0}[0m
+[0;32mI (1038841) LIGHT: Độ sáng: 16.8%[0m
+[0;32mI (1039081) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1040841) LIGHT: Độ sáng: 96.5%[0m
+[0;32mI (1041101) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1041101) rc522: rc522_picc_send(86): [0m
+[0;32mI (1042841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1042881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":206, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1043121) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1044841) LIGHT: Độ sáng: 94.1%[0m
+[0;32mI (1045141) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1046841) LIGHT: Độ sáng: 29.3%[0m
+[0;32mI (1047161) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1047161) rc522: rc522_picc_send(86): [0m
+[0;32mI (1047881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":29.3, "r1":0, "r2":0}[0m
+[0;32mI (1048841) LIGHT: Độ sáng: 52.7%[0m
+[0;32mI (1049181) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1050841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1051201) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1052841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (1052881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":96.1, "r1":0, "r2":0}[0m
+[0;32mI (1053221) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1054841) LIGHT: Độ sáng: 41.0%[0m
+[0;32mI (1055241) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1055241) rc522: rc522_picc_send(86): [0m
+[0;32mI (1056841) LIGHT: Độ sáng: 29.3%[0m
+[0;32mI (1057261) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1057881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":29.3, "r1":0, "r2":0}[0m
+[0;32mI (1058841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1059281) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1060841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (1061301) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1062841) LIGHT: Độ sáng: 90.2%[0m
+[0;32mI (1062881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":90.2, "r1":0, "r2":0}[0m
+[0;32mI (1063321) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1064841) LIGHT: Độ sáng: 44.5%[0m
+[0;32mI (1065341) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1066841) LIGHT: Độ sáng: 22.6%[0m
+[0;32mI (1067361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1067881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":22.6, "r1":0, "r2":0}[0m
+[0;32mI (1068841) LIGHT: Độ sáng: 52.7%[0m
+[0;32mI (1069381) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1070841) LIGHT: Độ sáng: 94.9%[0m
+[0;32mI (1071401) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1072841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1072881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1073421) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1074841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1075441) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1076841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (1077461) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1077461) rc522: rc522_picc_send(86): [0m
+[0;32mI (1077881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":96.1, "r1":0, "r2":0}[0m
+[0;32mI (1078841) LIGHT: Độ sáng: 85.9%[0m
+[0;32mI (1079481) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1080841) LIGHT: Độ sáng: 33.6%[0m
+[0;32mI (1081501) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1082841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (1082881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":19.9, "r1":0, "r2":0}[0m
+[0;32mI (1083521) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1084841) LIGHT: Độ sáng: 30.0%[0m
+[0;32mI (1085541) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1085541) rc522: rc522_picc_send(86): [0m
+[0;32mI (1086841) LIGHT: Độ sáng: 90.2%[0m
+[0;32mI (1087561) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1087881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":90.2, "r1":0, "r2":0}[0m
+[0;32mI (1088841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1089581) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1090841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1091601) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1092841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1092881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1093621) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1094841) LIGHT: Độ sáng: 98.4%[0m
+[0;32mI (1095641) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1096841) LIGHT: Độ sáng: 93.7%[0m
+[0;32mI (1097661) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1097661) rc522: rc522_picc_send(86): [0m
+[0;32mI (1097881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":93.7, "r1":0, "r2":0}[0m
+[0;32mI (1098841) LIGHT: Độ sáng: 87.9%[0m
+[0;32mI (1099681) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1100841) LIGHT: Độ sáng: 72.3%[0m
+[0;32mI (1101701) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1102841) LIGHT: Độ sáng: 45.7%[0m
+[0;32mI (1102881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":45.7, "r1":0, "r2":0}[0m
+[0;32mI (1103721) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1104841) LIGHT: Độ sáng: 34.7%[0m
+[0;32mI (1105741) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1105741) rc522: rc522_picc_send(86): [0m
+[0;32mI (1106841) LIGHT: Độ sáng: 29.3%[0m
+[0;32mI (1107761) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1107881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":29.3, "r1":0, "r2":0}[0m
+[0;32mI (1108841) LIGHT: Độ sáng: 21.1%[0m
+[0;32mI (1109781) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1110841) LIGHT: Độ sáng: 20.7%[0m
+[0;32mI (1111801) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1112841) LIGHT: Độ sáng: 21.5%[0m
+[0;32mI (1112881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":21.5, "r1":0, "r2":0}[0m
+[0;32mI (1113821) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1113821) rc522: rc522_picc_send(86): [0m
+[0;32mI (1114841) LIGHT: Độ sáng: 23.4%[0m
+[0;32mI (1115841) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1116841) LIGHT: Độ sáng: 26.9%[0m
+[0;32mI (1117861) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1117881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":206, "light":26.9, "r1":0, "r2":0}[0m
+[0;32mI (1118841) LIGHT: Độ sáng: 36.7%[0m
+[0;32mI (1119881) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1120841) LIGHT: Độ sáng: 54.7%[0m
+[0;32mI (1121901) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1121901) rc522: rc522_picc_send(86): [0m
+[0;32mI (1122841) LIGHT: Độ sáng: 72.6%[0m
+[0;32mI (1122881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":72.6, "r1":0, "r2":0}[0m
+[0;32mI (1123921) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1124841) LIGHT: Độ sáng: 84.0%[0m
+[0;32mI (1125941) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1126841) LIGHT: Độ sáng: 91.4%[0m
+[0;32mI (1127881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":91.4, "r1":0, "r2":0}[0m
+[0;32mI (1127961) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1127961) rc522: rc522_picc_send(86): [0m
+[0;32mI (1128841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (1129981) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1130841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1132001) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1132841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1132881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1134021) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1134841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1136041) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1136041) rc522: rc522_picc_send(86): [0m
+[0;32mI (1136841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1137881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1138061) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1138841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1140081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1140841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1142101) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1142101) rc522: rc522_picc_send(86): [0m
+[0;32mI (1142841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1142881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":205, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1144121) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1144841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1146141) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1146841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1147881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1148161) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1148841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (1150181) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1150181) rc522: rc522_picc_send(86): [0m
+[0;32mI (1150841) LIGHT: Độ sáng: 98.4%[0m
+[0;32mI (1152201) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1152841) LIGHT: Độ sáng: 97.3%[0m
+[0;32mI (1152881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":97.3, "r1":0, "r2":0}[0m
+[0;32mI (1154221) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1154841) LIGHT: Độ sáng: 94.5%[0m
+[0;32mI (1156241) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1156841) LIGHT: Độ sáng: 91.4%[0m
+[0;32mI (1157881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":91.4, "r1":0, "r2":0}[0m
+[0;32mI (1158261) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1158841) LIGHT: Độ sáng: 88.7%[0m
+[0;32mI (1160281) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1160841) LIGHT: Độ sáng: 82.8%[0m
+[0;32mI (1162301) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1162841) LIGHT: Độ sáng: 51.9%[0m
+[0;32mI (1162881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":51.9, "r1":0, "r2":0}[0m
+[0;32mI (1164321) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1164841) LIGHT: Độ sáng: 28.9%[0m
+[0;32mI (1166341) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1166841) LIGHT: Độ sáng: 22.2%[0m
+[0;32mI (1167881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":22.2, "r1":0, "r2":0}[0m
+[0;32mI (1168361) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1168841) LIGHT: Độ sáng: 30.0%[0m
+[0;32mI (1170381) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1170841) LIGHT: Độ sáng: 76.6%[0m
+[0;32mI (1172401) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1172401) rc522: rc522_picc_send(86): [0m
+[0;32mI (1172841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1172881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1174421) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1174841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1176441) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1176841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (1177881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":98.0, "r1":0, "r2":0}[0m
+[0;32mI (1178461) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1178841) LIGHT: Độ sáng: 91.0%[0m
+[0;32mI (1180481) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1180841) LIGHT: Độ sáng: 51.9%[0m
+[0;32mI (1182501) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1182841) LIGHT: Độ sáng: 19.5%[0m
+[0;32mI (1182881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":19.5, "r1":0, "r2":0}[0m
+[0;32mI (1184521) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1184841) LIGHT: Độ sáng: 24.6%[0m
+[0;32mI (1186541) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1186841) LIGHT: Độ sáng: 72.3%[0m
+[0;32mI (1187881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":72.3, "r1":0, "r2":0}[0m
+[0;32mI (1188561) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1188561) rc522: rc522_picc_send(86): [0m
+[0;32mI (1188841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1190581) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1190841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1192601) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1192841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (1192881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":221, "light":99.2, "r1":0, "r2":0}[0m
+[0;32mI (1194621) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1194841) LIGHT: Độ sáng: 95.7%[0m
+[0;32mI (1196641) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1196841) LIGHT: Độ sáng: 86.3%[0m
+[0;32mI (1197881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":86.3, "r1":0, "r2":0}[0m
+[0;32mI (1198661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1198841) LIGHT: Độ sáng: 46.9%[0m
+[0;32mI (1200681) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1200841) LIGHT: Độ sáng: 23.8%[0m
+[0;32mI (1202701) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1202701) rc522: rc522_picc_send(86): [0m
+[0;32mI (1202841) LIGHT: Độ sáng: 21.1%[0m
+[0;32mI (1202881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":205, "light":21.1, "r1":0, "r2":0}[0m
+[0;32mI (1204721) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1204841) LIGHT: Độ sáng: 34.4%[0m
+[0;32mI (1206741) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1206841) LIGHT: Độ sáng: 76.9%[0m
+[0;32mI (1207881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":76.9, "r1":0, "r2":0}[0m
+[0;32mI (1208761) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1208841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1210781) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1210781) rc522: rc522_picc_send(86): [0m
+[0;32mI (1210841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1212801) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1212841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1212881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1214821) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1214841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (1216841) LIGHT: Độ sáng: 54.7%[0m
+[0;32mI (1216841) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1216841) rc522: rc522_picc_send(86): [0m
+[0;32mI (1217881) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":54.7, "r1":0, "r2":0}[0m
+[0;32mI (1218841) LIGHT: Độ sáng: 86.3%[0m
+[0;32mI (1218861) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1220841) LIGHT: Độ sáng: 67.6%[0m
+[0;32mI (1220881) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1222841) LIGHT: Độ sáng: 29.3%[0m
+[0;32mI (1222901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":29.3, "r1":0, "r2":0}[0m
+[0;32mI (1222901) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1222901) rc522: rc522_picc_send(86): [0m
+[0;32mI (1224841) LIGHT: Độ sáng: 27.3%[0m
+[0;32mI (1224921) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1226841) LIGHT: Độ sáng: 25.0%[0m
+[0;32mI (1226941) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1227901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":238, "light":25.0, "r1":0, "r2":0}[0m
+[0;32mI (1228841) LIGHT: Độ sáng: 65.6%[0m
+[0;32mI (1228961) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1230841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1230981) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1230981) rc522: rc522_picc_send(86): [0m
+[0;32mI (1232841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1232901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":205, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1233001) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1234841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1235021) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1236841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (1237041) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1237901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":96.1, "r1":0, "r2":0}[0m
+[0;32mI (1238841) LIGHT: Độ sáng: 85.9%[0m
+[0;32mI (1239061) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1239061) rc522: rc522_picc_send(86): [0m
+[0;32mI (1240841) LIGHT: Độ sáng: 28.9%[0m
+[0;32mI (1241081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1242841) LIGHT: Độ sáng: 33.2%[0m
+[0;32mI (1242901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":33.2, "r1":0, "r2":0}[0m
+[0;32mI (1243101) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1244841) LIGHT: Độ sáng: 35.5%[0m
+[0;32mI (1245121) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1246841) LIGHT: Độ sáng: 75.8%[0m
+[0;32mI (1247141) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1247141) rc522: rc522_picc_send(86): [0m
+[0;32mI (1247901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":75.8, "r1":0, "r2":0}[0m
+[0;32mI (1248841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1249161) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1250841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1251181) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1252841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1252901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1253201) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1254841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1255221) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1255221) rc522: rc522_picc_send(86): [0m
+[0;32mI (1256841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1257241) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1257901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1258841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (1259261) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1260841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (1261281) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1261281) rc522: rc522_picc_send(86): [0m
+[0;32mI (1262841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (1262901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":99.2, "r1":0, "r2":0}[0m
+[0;32mI (1263301) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1264841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (1265321) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1266841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1267341) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1267341) rc522: rc522_picc_send(86): [0m
+[0;32mI (1267901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1268841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1269361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1270841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1271381) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1272841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1272901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":205, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1273401) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1274841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1275421) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1275421) rc522: rc522_picc_send(86): [0m
+[0;32mI (1276841) LIGHT: Độ sáng: 91.4%[0m
+[0;32mI (1277441) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1277901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":91.4, "r1":0, "r2":0}[0m
+[0;32mI (1278841) LIGHT: Độ sáng: 69.5%[0m
+[0;32mI (1279461) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1280841) LIGHT: Độ sáng: 34.0%[0m
+[0;32mI (1281481) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1282841) LIGHT: Độ sáng: 31.2%[0m
+[0;32mI (1282901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":31.2, "r1":0, "r2":0}[0m
+[0;32mI (1283501) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1283501) rc522: rc522_picc_send(86): [0m
+[0;32mI (1284841) LIGHT: Độ sáng: 21.8%[0m
+[0;32mI (1285521) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1286841) LIGHT: Độ sáng: 24.2%[0m
+[0;32mI (1287541) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1287901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":24.2, "r1":0, "r2":0}[0m
+[0;32mI (1288841) LIGHT: Độ sáng: 23.0%[0m
+[0;32mI (1289561) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1290841) LIGHT: Độ sáng: 16.0%[0m
+[0;32mI (1291581) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1292841) LIGHT: Độ sáng: 16.4%[0m
+[0;32mI (1292901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":16.4, "r1":0, "r2":0}[0m
+[0;32mI (1293601) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1294841) LIGHT: Độ sáng: 16.0%[0m
+[0;32mI (1295621) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1296841) LIGHT: Độ sáng: 19.1%[0m
+[0;32mI (1297641) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1297901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":19.1, "r1":0, "r2":0}[0m
+[0;32mI (1298841) LIGHT: Độ sáng: 42.5%[0m
+[0;32mI (1299661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1300841) LIGHT: Độ sáng: 76.5%[0m
+[0;32mI (1301681) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1302841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1302901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1303701) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1304841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1305721) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1305721) rc522: rc522_picc_send(86): [0m
+[0;32mI (1306841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (1307741) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1307901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":98.0, "r1":0, "r2":0}[0m
+[0;32mI (1308841) LIGHT: Độ sáng: 82.4%[0m
+[0;32mI (1309761) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1310841) LIGHT: Độ sáng: 17.9%[0m
+[0;32mI (1311781) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1312841) LIGHT: Độ sáng: 68.0%[0m
+[0;32mI (1312901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":68.0, "r1":0, "r2":0}[0m
+[0;32mI (1313801) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1313801) rc522: rc522_picc_send(86): [0m
+[0;32mI (1314841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1315821) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1316841) LIGHT: Độ sáng: 84.4%[0m
+[0;32mI (1317841) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1317901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":84.4, "r1":0, "r2":0}[0m
+[0;32mI (1318841) LIGHT: Độ sáng: 24.2%[0m
+[0;32mI (1319861) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1319861) rc522: rc522_picc_send(86): [0m
+[0;32mI (1320841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1321881) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1322841) LIGHT: Độ sáng: 74.6%[0m
+[0;32mI (1322901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":221, "light":74.6, "r1":0, "r2":0}[0m
+[0;32mI (1323901) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1324841) LIGHT: Độ sáng: 66.8%[0m
+[0;32mI (1325921) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1326841) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (1327901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":206, "light":97.6, "r1":0, "r2":0}[0m
+[0;32mI (1327941) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1327941) rc522: rc522_picc_send(86): [0m
+[0;32mI (1328841) LIGHT: Độ sáng: 19.1%[0m
+[0;32mI (1329961) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1330841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (1331981) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1332841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (1332901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":221, "light":19.9, "r1":0, "r2":0}[0m
+[0;32mI (1334001) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1334841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1336021) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1336021) rc522: rc522_picc_send(86): [0m
+[0;32mI (1336841) LIGHT: Độ sáng: 22.6%[0m
+[0;32mI (1337901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":22.6, "r1":0, "r2":0}[0m
+[0;32mI (1338041) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1338841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1340061) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1340841) LIGHT: Độ sáng: 55.1%[0m
+[0;32mI (1342081) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1342841) LIGHT: Độ sáng: 88.3%[0m
+[0;32mI (1342901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":206, "light":88.3, "r1":0, "r2":0}[0m
+[0;32mI (1344101) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1344101) rc522: rc522_picc_send(86): [0m
+[0;32mI (1344841) LIGHT: Độ sáng: 95.7%[0m
+[0;32mI (1346121) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1346841) LIGHT: Độ sáng: 16.4%[0m
+[0;32mI (1347901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":16.4, "r1":0, "r2":0}[0m
+[0;32mI (1348141) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1348841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1350161) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1350161) rc522: rc522_picc_send(86): [0m
+[0;32mI (1350841) LIGHT: Độ sáng: 77.7%[0m
+[0;32mI (1352181) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1352841) LIGHT: Độ sáng: 52.7%[0m
+[0;32mI (1352901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":52.7, "r1":0, "r2":0}[0m
+[0;32mI (1354201) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1354841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1356221) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1356841) LIGHT: Độ sáng: 36.7%[0m
+[0;32mI (1357901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":36.7, "r1":0, "r2":0}[0m
+[0;32mI (1358241) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1358841) LIGHT: Độ sáng: 82.4%[0m
+[0;32mI (1360261) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1360841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (1362281) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1362841) LIGHT: Độ sáng: 17.9%[0m
+[0;32mI (1362901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":206, "light":17.9, "r1":0, "r2":0}[0m
+[0;32mI (1364301) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1364841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1366321) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1366841) LIGHT: Độ sáng: 93.7%[0m
+[0;32mI (1367901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":62.0, "gas":221, "light":93.7, "r1":0, "r2":0}[0m
+[0;32mI (1368341) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1368841) LIGHT: Độ sáng: 18.3%[0m
+[0;32mI (1370361) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1370841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1372381) DHT11: 30.0°C | 62.0%[0m
+[1;31mE (1372381) rc522: rc522_picc_send(86): [0m
+[0;32mI (1372841) LIGHT: Độ sáng: 30.8%[0m
+[0;32mI (1372901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":62.0, "gas":221, "light":30.8, "r1":0, "r2":0}[0m
+[0;32mI (1374401) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1374841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1376421) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1376841) LIGHT: Độ sáng: 89.0%[0m
+[0;32mI (1377901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":62.0, "gas":238, "light":89.0, "r1":0, "r2":0}[0m
+[0;32mI (1378441) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1378841) LIGHT: Độ sáng: 37.1%[0m
+[0;32mI (1380461) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1380841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1382481) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1382841) LIGHT: Độ sáng: 19.9%[0m
+[0;32mI (1382901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":62.0, "gas":222, "light":19.9, "r1":0, "r2":0}[0m
+[0;32mI (1384501) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1384841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1386521) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1386841) LIGHT: Độ sáng: 91.4%[0m
+[0;32mI (1387901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":62.0, "gas":221, "light":91.4, "r1":0, "r2":0}[0m
+[0;32mI (1388541) DHT11: 30.0°C | 62.0%[0m
+[1;31mE (1388541) rc522: rc522_picc_send(86): [0m
+[0;32mI (1388841) LIGHT: Độ sáng: 18.3%[0m
+[0;32mI (1390561) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1390841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1392581) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1392841) LIGHT: Độ sáng: 78.5%[0m
+[0;32mI (1392901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":62.0, "gas":221, "light":78.5, "r1":0, "r2":0}[0m
+[0;32mI (1394601) DHT11: 30.0°C | 62.0%[0m
+[1;31mE (1394601) rc522: rc522_picc_send(86): [0m
+[0;32mI (1394841) LIGHT: Độ sáng: 30.5%[0m
+[0;32mI (1396621) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1396841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1397901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1398641) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1398841) LIGHT: Độ sáng: 86.3%[0m
+[0;32mI (1400661) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1400841) LIGHT: Độ sáng: 16.4%[0m
+[0;32mI (1402681) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1402841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1402901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1404701) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1404841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (1406721) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1406841) LIGHT: Độ sáng: 71.5%[0m
+[0;32mI (1407901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":71.5, "r1":0, "r2":0}[0m
+[0;32mI (1408741) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1408841) LIGHT: Độ sáng: 22.6%[0m
+[0;32mI (1410761) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1410761) rc522: rc522_picc_send(86): [0m
+[0;32mI (1410841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1412781) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1412841) LIGHT: Độ sáng: 98.8%[0m
+[0;32mI (1412901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":62.0, "gas":206, "light":98.8, "r1":0, "r2":0}[0m
+[0;32mI (1414801) DHT11: 30.0°C | 62.0%[0m
+[0;32mI (1414841) LIGHT: Độ sáng: 50.0%[0m
+[0;32mI (1416821) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1416841) LIGHT: Độ sáng: 41.4%[0m
+[0;32mI (1417901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":222, "light":41.4, "r1":0, "r2":0}[0m
+[0;32mI (1418841) LIGHT: Độ sáng: 95.3%[0m
+[0;32mI (1418841) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1420841) LIGHT: Độ sáng: 90.2%[0m
+[0;32mI (1420861) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1422841) LIGHT: Độ sáng: 16.0%[0m
+[0;32mI (1422881) DHT11: 30.0°C | 61.0%[0m
+[0;32mI (1422901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":61.0, "gas":238, "light":16.0, "r1":0, "r2":0}[0m
+[0;32mI (1424841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1424901) DHT11: 30.0°C | 61.0%[0m
+[1;31mE (1424901) rc522: rc522_picc_send(86): [0m
+[0;32mI (1426841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (1426921) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1427901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":96.1, "r1":0, "r2":0}[0m
+[0;32mI (1428841) LIGHT: Độ sáng: 21.8%[0m
+[0;32mI (1428941) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1430841) LIGHT: Độ sáng: 92.9%[0m
+[0;32mI (1430961) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1432841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (1432901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":206, "light":99.6, "r1":0, "r2":0}[0m
+[0;32mI (1432981) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1434841) LIGHT: Độ sáng: 69.9%[0m
+[0;32mI (1435001) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1436841) LIGHT: Độ sáng: 35.9%[0m
+[0;32mI (1437021) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1437901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":35.9, "r1":0, "r2":0}[0m
+[0;32mI (1438841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1439041) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1440841) LIGHT: Độ sáng: 91.0%[0m
+[0;32mI (1441061) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1442841) LIGHT: Độ sáng: 20.3%[0m
+[0;32mI (1442901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":205, "light":20.3, "r1":0, "r2":0}[0m
+[0;32mI (1443081) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1444841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1445101) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1446841) LIGHT: Độ sáng: 94.5%[0m
+[0;32mI (1447121) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1447121) rc522: rc522_picc_send(86): [0m
+[0;32mI (1447901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":94.5, "r1":0, "r2":0}[0m
+[0;32mI (1448841) LIGHT: Độ sáng: 18.7%[0m
+[0;32mI (1449141) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1450841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1451161) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1452841) LIGHT: Độ sáng: 96.1%[0m
+[0;32mI (1452901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":96.1, "r1":0, "r2":0}[0m
+[0;32mI (1453181) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1454841) LIGHT: Độ sáng: 19.5%[0m
+[0;32mI (1455201) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1456841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1457221) DHT11: 30.0°C | 59.0%[0m
+[0;32mI (1457901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":59.0, "gas":205, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1458841) LIGHT: Độ sáng: 94.1%[0m
+[0;32mI (1459241) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1460841) LIGHT: Độ sáng: 20.7%[0m
+[0;32mI (1461261) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1461261) rc522: rc522_picc_send(86): [0m
+[0;32mI (1462841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1462901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1463281) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1464841) LIGHT: Độ sáng: 85.9%[0m
+[0;32mI (1465301) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1466841) LIGHT: Độ sáng: 53.1%[0m
+[0;32mI (1467321) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1467901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":53.1, "r1":0, "r2":0}[0m
+[0;32mI (1468841) LIGHT: Độ sáng: 99.6%[0m
+[0;32mI (1469341) DHT11: 30.0°C | 59.0%[0m
+[1;31mE (1469341) rc522: rc522_picc_send(86): [0m
+[0;32mI (1470841) LIGHT: Độ sáng: 30.5%[0m
+[0;32mI (1471361) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1472841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1472901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1473381) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1474841) LIGHT: Độ sáng: 95.7%[0m
+[0;32mI (1475401) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1475401) rc522: rc522_picc_send(86): [0m
+[0;32mI (1476841) LIGHT: Độ sáng: 29.6%[0m
+[0;32mI (1477421) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1477901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":29.6, "r1":0, "r2":0}[0m
+[0;32mI (1478841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1479441) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1480841) LIGHT: Độ sáng: 93.3%[0m
+[0;32mI (1481461) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1482841) LIGHT: Độ sáng: 20.3%[0m
+[0;32mI (1482901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":20.3, "r1":0, "r2":0}[0m
+[0;32mI (1483481) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1483481) rc522: rc522_picc_send(86): [0m
+[0;32mI (1484841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1485501) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1486841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (1487521) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1487901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":98.0, "r1":0, "r2":0}[0m
+[0;32mI (1488841) LIGHT: Độ sáng: 37.9%[0m
+[0;32mI (1489541) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1490841) LIGHT: Độ sáng: 55.1%[0m
+[0;32mI (1491561) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1491561) rc522: rc522_picc_send(86): [0m
+[0;32mI (1492841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1492901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":222, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1493581) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1494841) LIGHT: Độ sáng: 90.2%[0m
+[0;32mI (1495601) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1496841) LIGHT: Độ sáng: 20.7%[0m
+[0;32mI (1497621) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1497621) rc522: rc522_picc_send(86): [0m
+[0;32mI (1497901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":221, "light":20.7, "r1":0, "r2":0}[0m
+[0;32mI (1498841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1499641) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1500841) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (1501661) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1502841) LIGHT: Độ sáng: 27.7%[0m
+[0;32mI (1502901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":27.7, "r1":0, "r2":0}[0m
+[0;32mI (1503681) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1504841) LIGHT: Độ sáng: 78.1%[0m
+[0;32mI (1505701) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1506841) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (1507721) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1507901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":205, "light":99.2, "r1":0, "r2":0}[0m
+[0;32mI (1508841) LIGHT: Độ sáng: 48.4%[0m
+[0;32mI (1509741) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1510841) LIGHT: Độ sáng: 49.2%[0m
+[0;32mI (1511761) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1512841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1512901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1513781) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1513781) rc522: rc522_picc_send(86): [0m
+[0;32mI (1514841) LIGHT: Độ sáng: 86.7%[0m
+[0;32mI (1515801) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1516841) LIGHT: Độ sáng: 20.3%[0m
+[0;32mI (1517821) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1517901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":237, "light":20.3, "r1":0, "r2":0}[0m
+[0;32mI (1518841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1519841) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1519841) rc522: rc522_picc_send(86): [0m
+[0;32mI (1520841) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (1521861) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1522841) LIGHT: Độ sáng: 39.0%[0m
+[0;32mI (1522901) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":39.0, "r1":0, "r2":0}[0m
+[0;32mI (1523881) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1524841) LIGHT: Độ sáng: 42.9%[0m
+[0;32mI (1525901) DHT11: 30.0°C | 60.0%[0m
+[0;32mI (1526841) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (1527921) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":60.0, "gas":238, "light":100.0, "r1":0, "r2":0}[0m
+[0;32mI (1527921) DHT11: 30.0°C | 60.0%[0m
+[1;31mE (1527921) rc522: rc522_picc_send(86): [0m
