@@ -1,0 +1,406 @@
+Command: D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM5 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace D:\projects\smart_home_project\build\smart_home_project.elf D:\projects\smart_home_project\build\bootloader\bootloader.elf --force-color -m 'D:\App\esp_idf\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'D:\App\esp_idf\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py' '-p' 'COM5'
+ESP-ROM:esp32c6-20220919
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0xc (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xec8
+load:0x4086e610,len:0x31c4
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v5.5.2-dirty 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Mar 27 2026 08:51:29[0m
+[0;32mI (24) boot: chip revision: v0.0[0m
+[0;32mI (24) boot: efuse block revision: v0.2[0m
+[0;32mI (28) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (31) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (35) boot.esp32c6: SPI Flash Size : 4MB[0m
+[0;32mI (39) boot: Enabling RNG early entropy source...[0m
+[0;32mI (43) boot: Partition Table:[0m
+[0;32mI (46) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (52) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (65) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (72) boot:  3 storage          Unknown data     01 81 00210000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=420c0020 size=2652ch (156972) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=00036554 vaddr=40800000 size=09ac4h ( 39620) load[0m
+[0;32mI (128) esp_image: segment 2: paddr=00040020 vaddr=42000020 size=bf58ch (783756) map[0m
+[0;32mI (278) esp_image: segment 3: paddr=000ff5b4 vaddr=40809ac4 size=13684h ( 79492) load[0m
+[0;32mI (296) esp_image: segment 4: paddr=00112c40 vaddr=4081d150 size=03914h ( 14612) load[0m
+[0;32mI (300) esp_image: segment 5: paddr=0011655c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (308) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (308) boot: Disabling RNG early entropy source...[0m
+[0;32mI (321) cpu_start: Unicore app[0m
+[0;32mI (330) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (330) cpu_start: Pro cpu start user code[0m
+[0;32mI (330) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (332) app_init: Application information:[0m
+[0;32mI (336) app_init: Project name:     smart_home_project[0m
+[0;32mI (341) app_init: App version:      d954600-dirty[0m
+[0;32mI (345) app_init: Compile time:     Mar 29 2026 20:21:09[0m
+[0;32mI (350) app_init: ELF file SHA256:  2c1cdf52c...[0m
+[0;32mI (355) app_init: ESP-IDF:          v5.5.2-dirty[0m
+[0;32mI (359) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (363) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (367) efuse_init: Chip rev:         v0.0[0m
+[0;32mI (371) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (377) heap_init: At 40826590 len 00056080 (344 KiB): RAM[0m
+[0;32mI (382) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (387) heap_init: At 50000020 len 00003FC8 (15 KiB): RTCRAM[0m
+[0;32mI (393) spi_flash: detected chip: generic[0m
+[0;32mI (396) spi_flash: flash io: dio[0m
+[0;32mI (400) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (406) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (412) coexist: coex firmware version: 7260f71[0m
+[0;32mI (417) coexist: coexist rom version 5b8dcfa[0m
+[0;32mI (421) main_task: Started on CPU0[0m
+[0;32mI (441) main_task: Calling app_main()[0m
+[0;32mI (441) SMART_HOME_MAIN: Khởi động Smart Home Firmware...[0m
+[0;32mI (841) ANALOG_MGR: Analog Sensors (Gas & Light) initialized successfully.[0m
+[0;32mI (841) BUTTON_COMPONENT: Đã khởi tạo xong nút nhấn tại GPIO 3[0m
+[0;32mI (841) BUTTON_COMPONENT: Đã khởi tạo xong nút nhấn tại GPIO 9[0m
+[0;32mI (841) BUTTON_COMPONENT: Đã khởi tạo xong nút nhấn tại GPIO 4[0m
+[0;32mI (851) BUTTON_COMPONENT: Đã khởi tạo xong nút nhấn tại GPIO 5[0m
+[0;32mI (901) rc522: PCD (fw=v2.0) initialized[0m
+[0;32mI (901) WIFI_MANAGER: Initializing WiFi...[0m
+[0;32mI (911) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (911) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (921) wifi:wifi driver task: 4082f104, prio:23, stack:6656, core=0[0m
+[0;32mI (921) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (921) wifi:wifi certification version: v7.0[0m
+[0;32mI (921) wifi:config NVS flash: enabled[0m
+[0;32mI (921) wifi:config nano formatting: disabled[0m
+[0;32mI (931) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (931) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (941) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (941) wifi:Init management short buffer num: 32[0m
+[0;32mI (951) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (951) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (951) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (961) wifi:Init static rx buffer num: 10[0m
+[0;32mI (961) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (971) wifi_init: rx ba win: 6[0m
+[0;32mI (971) wifi_init: accept mbox: 6[0m
+[0;32mI (971) wifi_init: tcpip mbox: 32[0m
+[0;32mI (981) wifi_init: udp mbox: 6[0m
+[0;32mI (981) wifi_init: tcp mbox: 6[0m
+[0;32mI (981) wifi_init: tcp tx win: 5760[0m
+[0;32mI (991) wifi_init: tcp rx win: 5760[0m
+[0;32mI (991) wifi_init: tcp mss: 1440[0m
+[0;32mI (991) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (1001) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (1001) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;33mW (1001) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (1011) phy_init: phy_version 343,b513b46,Nov 14 2025,16:34:12[0m
+[0;33mW (1081) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1081) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (1091) wifi:(agc)0x600a7128:0xd20a1a28, min.avgNF:0xce->0xd2(dB), RCalCount:0xa1, min.RRssi:0xa28(-93.50)[0m
+[0;32mI (1101) wifi:11ax coex: WDEVAX_PTI0(0x55777555), WDEVAX_PTI1(0x00003377).[0m
+
+[0;32mI (1101) wifi:mode : sta (54:32:04:0c:fb:e4)[0m
+[0;32mI (1111) wifi:enable tsf[0m
+[0;32mI (1111) WIFI_MANAGER: Connecting to WiFi...[0m
+[0;32mI (1121) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1121) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (1131) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1141) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1141) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1141) wifi:(trc)phytype:CBW20-SGI, snr:32, maxRate:144, highestRateIdx:0[0m
+[0;33mW (1151) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (1151) wifi:(trc)band:2G, rate(L-MCS6, rateIdx:2), ampdu(rate:L-MCS6, schedIdx(2, stop:8)), snr:32, ampduState:wait operational[0m
+[0;32mI (1171) wifi:ifidx:0, rssi:-65, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x3, 11bgn), max_rate:144, he:0, vht:0, ht:1[0m
+[0;32mI (1181) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:0(no restriction)[0m
+[0;32mI (1521) wifi:connected with 509 TQV, aid = 8, channel 11, BW20, bssid = a8:15:4d:e2:2c:78[0m
+[0;32mI (1521) wifi:security: WPA2-PSK, phy:bgn, rssi:-65, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (1521) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (1531) wifi:pm start, type:1, aid:0x8, trans-BSSID:a8:15:4d:e2:2c:78, BSSID[5]:0x78, mbssid(max-indicator:0, index:0), he:0[0m
+[0;32mI (1541) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1551) wifi:set rx beacon pti, rx_bcn_pti: 10, bcn_timeout: 25000, mt_pti: 10, mt_time: 10000[0m
+[0;32mI (1551) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1571) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (1581) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:64, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (1591) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1601) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1611) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:64, batimeout:0, txa_wnd:64[0m
+[0;32mI (1611) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;33mW (1621) wifi:<ba-add>idx:0, ifx:0, tid:0, TAHI:0x100782c, TALO:0xe24d15a8, (ssn:2, win:64, cur_ssn:2), CONF:0xc0000005[0m
+[0;32mI (2631) esp_netif_handlers: sta ip: 192.168.83.115, mask: 255.255.255.0, gw: 192.168.83.1[0m
+[0;32mI (2631) WIFI_MANAGER: Connected successfully! Got IP: 192.168.83.115[0m
+[0;32mI (3141) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (3141) SMART_HOME_MAIN: Task MQTT Telemetry đã sẵn sàng.[0m
+[0;32mI (3141) main_task: Returned from app_main()[0m
+[0;32mI (5161) LIGHT: Độ sáng: 60.5%[0m
+[0;32mI (5161) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (7161) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (7181) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (9161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (9201) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (11161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (11221) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (11331) MQTT_MANAGER: Đã kết nối tới MQTT Broker![0m
+[0;32mI (11331) MQTT_MANAGER: Đã Subscribe topic: smarthub/chinh/control[0m
+[0;32mI (11331) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":698, "light":99.2, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (13161) LIGHT: Độ sáng: 23.0%[0m
+[0;32mI (13241) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (15161) LIGHT: Độ sáng: 96.5%[0m
+[0;32mI (15261) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (16341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":666, "light":96.5, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (17161) LIGHT: Độ sáng: 99.2%[0m
+[0;32mI (17281) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (17281) rc522: rc522_picc_send(86): [0m
+[0;32mI (19161) LIGHT: Độ sáng: 34.7%[0m
+[0;32mI (19301) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (21161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (21321) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (21341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":667, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;33mW (22581) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 3[0m
+[0;32mI (22631) SMART_HOME_MAIN: Nút 1: Đã BẬT Relay 1[0m
+[0;33mW (22781) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 3[0m
+[0;32mI (23161) LIGHT: Độ sáng: 53.1%[0m
+[0;32mI (23341) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (25161) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (25361) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (25361) rc522: rc522_picc_send(86): [0m
+[0;32mI (26341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":681, "light":98.0, "r1":1, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (27161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (27381) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (29161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (29401) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (31161) LIGHT: Độ sáng: 28.1%[0m
+[0;32mI (31341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":714, "light":28.1, "r1":1, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (31421) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (33161) LIGHT: Độ sáng: 98.0%[0m
+[0;32mI (33441) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (33441) rc522: rc522_picc_send(86): [0m
+[0;32mI (35161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (35461) DHT11: 30.0°C | 66.0%[0m
+[0;33mW (36231) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 9[0m
+[0;32mI (36281) SMART_HOME_MAIN: Nút 2: Đã BẬT Relay 2[0m
+[0;32mI (36341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":697, "light":100.0, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;33mW (36441) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 9[0m
+[0;33mW (36491) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 9[0m
+[0;33mW (36541) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 9[0m
+[0;32mI (37161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (37481) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (39161) LIGHT: Độ sáng: 39.0%[0m
+[0;32mI (39501) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (41161) LIGHT: Độ sáng: 42.5%[0m
+[0;32mI (41341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":745, "light":42.5, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;32mI (41521) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (43161) LIGHT: Độ sáng: 40.6%[0m
+[0;32mI (43541) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (45161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (45561) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (46341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":698, "light":100.0, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;32mI (47161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (47581) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (49161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (49601) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (49601) rc522: rc522_picc_send(86): [0m
+[0;32mI (51161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (51341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":745, "light":100.0, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;32mI (51621) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (53161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (53641) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (55161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (55661) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (56341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":681, "light":100.0, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;32mI (57161) LIGHT: Độ sáng: 34.7%[0m
+[0;32mI (57681) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (57681) rc522: rc522_picc_send(86): [0m
+[0;32mI (59161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (59701) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (61161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (61341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":713, "light":100.0, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;32mI (61721) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (63161) LIGHT: Độ sáng: 77.7%[0m
+[0;32mI (63741) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (65161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (65761) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (65761) rc522: rc522_picc_send(86): [0m
+[0;32mI (66341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":745, "light":100.0, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;32mI (67161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (67781) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (69161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (69801) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (71161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (71341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":698, "light":100.0, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;32mI (71821) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (73161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (73841) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (73841) rc522: rc522_picc_send(86): [0m
+[0;33mW (74301) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 3[0m
+[0;32mI (74351) SMART_HOME_MAIN: Nút 1: Đã TẮT Relay 1[0m
+[0;32mI (75161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (75861) DHT11: 30.0°C | 66.0%[0m
+[0;33mW (75911) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 9[0m
+[0;32mI (75961) SMART_HOME_MAIN: Nút 2: Đã TẮT Relay 2[0m
+[0;32mI (76341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":714, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (77161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (77881) DHT11: 30.0°C | 66.0%[0m
+[0;33mW (78211) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 3[0m
+[0;32mI (78261) SMART_HOME_MAIN: Nút 1: Đã BẬT Relay 1[0m
+[0;32mI (79161) LIGHT: Độ sáng: 100.0%[0m
+[0;33mW (79221) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 9[0m
+[0;32mI (79271) SMART_HOME_MAIN: Nút 2: Đã BẬT Relay 2[0m
+[0;32mI (79901) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (81161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (81341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":730, "light":100.0, "r1":1, "r2":1, "r3":0, "r4":0}[0m
+[0;32mI (81921) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (81921) rc522: rc522_picc_send(86): [0m
+[0;32mI (83161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (83941) DHT11: 30.0°C | 66.0%[0m
+[0;33mW (84571) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 3[0m
+[0;32mI (84621) SMART_HOME_MAIN: Nút 1: Đã TẮT Relay 1[0m
+[0;32mI (85161) LIGHT: Độ sáng: 99.2%[0m
+[0;33mW (85541) SMART_HOME_MAIN: >>> ESP32 NHẬN TÍN HIỆU TỪ CHÂN GPIO SỐ: 9[0m
+[0;32mI (85591) SMART_HOME_MAIN: Nút 2: Đã TẮT Relay 2[0m
+[0;32mI (85961) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (86341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":681, "light":99.2, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (87161) LIGHT: Độ sáng: 96.9%[0m
+[0;32mI (87981) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (89161) LIGHT: Độ sáng: 69.9%[0m
+[0;32mI (90001) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (91161) LIGHT: Độ sáng: 38.6%[0m
+[0;32mI (91341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":667, "light":38.6, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (92021) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (93161) LIGHT: Độ sáng: 46.9%[0m
+[0;32mI (94041) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (95161) LIGHT: Độ sáng: 21.1%[0m
+[0;32mI (96061) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (96341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":667, "light":21.1, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (97161) LIGHT: Độ sáng: 23.8%[0m
+[0;32mI (98081) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (99161) LIGHT: Độ sáng: 69.9%[0m
+[0;32mI (100101) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (101161) LIGHT: Độ sáng: 97.6%[0m
+[0;32mI (101341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":698, "light":97.6, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (102121) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (103161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (104141) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (104141) rc522: rc522_picc_send(86): [0m
+[0;32mI (105161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (106161) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (106341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":651, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (107161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (108181) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (109161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (110201) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (111161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (111341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":666, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (112221) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (113161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (114241) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (115161) LIGHT: Độ sáng: 35.5%[0m
+[0;32mI (116261) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (116341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":651, "light":35.5, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (117161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (118281) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (119161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (120301) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (120301) rc522: rc522_picc_send(86): [0m
+[0;32mI (121161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (121341) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":713, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (122321) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (123161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (124341) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (125161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (126361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":650, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (126361) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (127161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (128381) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (128381) rc522: rc522_picc_send(86): [0m
+[0;32mI (129161) LIGHT: Độ sáng: 94.1%[0m
+[0;32mI (130401) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (131161) LIGHT: Độ sáng: 66.4%[0m
+[0;32mI (131361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":681, "light":66.4, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (132421) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (133161) LIGHT: Độ sáng: 46.1%[0m
+[0;32mI (134441) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (135161) LIGHT: Độ sáng: 29.3%[0m
+[0;32mI (136361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":667, "light":29.3, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (136461) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (136461) rc522: rc522_picc_send(86): [0m
+[0;32mI (137161) LIGHT: Độ sáng: 34.7%[0m
+[0;32mI (138481) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (139161) LIGHT: Độ sáng: 38.7%[0m
+[0;32mI (140501) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (141161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (141361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":651, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (142521) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (143161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (144541) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (145161) LIGHT: Độ sáng: 34.7%[0m
+[0;32mI (146361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":666, "light":34.7, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (146561) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (147161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (148581) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (149161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (150601) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (151161) LIGHT: Độ sáng: 44.1%[0m
+[0;32mI (151361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":650, "light":44.1, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (152621) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (153161) LIGHT: Độ sáng: 33.9%[0m
+[0;32mI (154641) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (155161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (156361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":697, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (156661) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (157161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (158681) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (159161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (160701) DHT11: 30.0°C | 66.0%[0m
+[1;31mE (160701) rc522: rc522_picc_send(86): [0m
+[0;32mI (161161) LIGHT: Độ sáng: 92.6%[0m
+[0;32mI (161361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":713, "light":92.6, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (162721) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (163161) LIGHT: Độ sáng: 35.5%[0m
+[0;32mI (164741) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (165161) LIGHT: Độ sáng: 67.5%[0m
+[0;32mI (166361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":666, "light":67.5, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (166761) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (167161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (168781) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (169161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (170801) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (171161) LIGHT: Độ sáng: 74.6%[0m
+[0;32mI (171361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":713, "light":74.6, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (172821) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (173161) LIGHT: Độ sáng: 26.9%[0m
+[0;32mI (174841) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (175161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (176361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":666, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (176861) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (177161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (178881) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (179161) LIGHT: Độ sáng: 57.0%[0m
+[0;32mI (180901) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (181161) LIGHT: Độ sáng: 27.7%[0m
+[0;32mI (181361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":651, "light":27.7, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (182921) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (183161) LIGHT: Độ sáng: 35.1%[0m
+[0;32mI (184941) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (185161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (186361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":667, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (186961) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (187161) LIGHT: Độ sáng: 26.2%[0m
+[0;32mI (188981) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (189161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (191001) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (191161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (191361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":667, "light":100.0, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (193021) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (193161) LIGHT: Độ sáng: 31.6%[0m
+[0;32mI (195041) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (195161) LIGHT: Độ sáng: 44.5%[0m
+[0;32mI (196361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":698, "light":44.5, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (197061) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (197161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (199081) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (199161) LIGHT: Độ sáng: 100.0%[0m
+[0;32mI (201101) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (201161) LIGHT: Độ sáng: 54.3%[0m
+[0;32mI (201361) MQTT_MANAGER:  Bắn lên Cloud: {"temp":30.0, "hum":66.0, "gas":666, "light":54.3, "r1":0, "r2":0, "r3":0, "r4":0}[0m
+[0;32mI (203121) DHT11: 30.0°C | 66.0%[0m
+[0;32mI (203161) LIGHT: Độ sáng: 32.4%[0m

@@ -40,16 +40,16 @@ esp_err_t analog_sensors_init(void) {
     return ESP_OK;
 }
 
-int analog_get_gas_voltage(void) {
+int analog_get_gas_voltage(void) { // Trả về điện áp (mV) từ cảm biến Gas
     int raw, voltage = 0;
-    adc_oneshot_read(adc_handle, GAS_ADC_CHAN, &raw);
-    if (cali_gas) {
+    adc_oneshot_read(adc_handle, GAS_ADC_CHAN, &raw);// Đọc giá trị thô từ ADC
+    if (cali_gas) { // Chuyển đổi giá trị thô sang điện áp (mV) sử dụng hiệu chuẩn
         adc_cali_raw_to_voltage(cali_gas, raw, &voltage);
     }
     return voltage;
 }
 
-float analog_get_light_percentage(void) {
+float analog_get_light_percentage(void) { // Trả về phần trăm ánh sáng, 0% = tối, 100% = sáng
     int raw;
     adc_oneshot_read(adc_handle, LIGHT_ADC_CHAN, &raw);
     // Công thức: 100% khi trời sáng (Raw thấp), 0% khi tối (Raw cao)
