@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "smart_home_project",
-    "project_version":    "d954600-dirty",
+    "project_version":    "48ddccc-dirty",
     "project_path":       "D:/projects/smart_home_project",
     "idf_path":           "D:/App/esp_idf/Espressif/frameworks/esp-idf-v5.5.2",
     "build_dir":          "D:/projects/smart_home_project/build",
