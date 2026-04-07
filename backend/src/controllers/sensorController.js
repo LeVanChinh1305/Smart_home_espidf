@@ -7,7 +7,13 @@ export const getLiveStats = async (req, res) => {
         const latestData = await SensorRaw.findOne().sort({ createdAt: -1 });
         
         if (!latestData) {
-            return res.status(404).json({ message: 'Chưa có dữ liệu cảm biến' });
+            return res.status(200).json({
+                light: 0,
+                temp: 0,
+                humidity: 0,
+                gas: 0,
+                lastUpdate: ""
+            });
         }
 
         // Đổi tên 'hum' thành 'humidity' để khớp với Frontend
@@ -41,8 +47,8 @@ export const getChartData = async (req, res) => {
             '12h': { ms: 12 * 60 * 60 * 1000, points: 12, model: SensorHourly, timeField: 'timestamp' },
             '1d':  { ms: 24 * 60 * 60 * 1000, points: 12, model: SensorHourly, timeField: 'timestamp' },
             '3d':  { ms: 3 * 24 * 60 * 60 * 1000, points: 18, model: SensorHourly, timeField: 'timestamp' },
-            '7d':  { ms: 7 * 24 * 60 * 60 * 1000, points: 7, model: SensorDaily, timeField: 'timestamp' },
-            '1M':  { ms: 30 * 24 * 60 * 60 * 1000, points: 30, model: SensorDaily, timeField: 'timestamp' }
+            '7d':  { ms: 7 * 24 * 60 * 60 * 1000, points: 7, model: SensorHourly, timeField: 'timestamp' },
+            '1M':  { ms: 30 * 24 * 60 * 60 * 1000, points: 30, model: SensorHourly, timeField: 'timestamp' }
         };
 
         // Lấy cấu hình theo range frontend gửi lên (mặc định là 1h nếu lỗi)
@@ -57,56 +63,48 @@ export const getChartData = async (req, res) => {
             [timeField]: { $gte: startTime, $lte: now }
         }).sort({ [timeField]: 1 });
 
-        // 3. THUẬT TOÁN CHIA GIỎ (BUCKETING)
-        const bucketSizeMs = ms / points; // Khoảng thời gian của mỗi mốc
-        const buckets = Array.from({ length: points }, (_, i) => ({
-            date: new Date(startTime.getTime() + (i * bucketSizeMs)),
-            light: [], temp: [], humidity: [], gas: []
-        }));
+        // 3. THUẬT TOÁN CHIA GIỎ (BUCKETING) - ĐÃ FIX LỖI NHÃN THỜI GIAN
+        const bucketSizeMs = ms / points; 
+        
+        const buckets = Array.from({ length: points }, (_, i) => {
+            const bucketStart = startTime.getTime() + (i * bucketSizeMs);
+            const bucketEnd = bucketStart + bucketSizeMs;
+            return {
+                // SỬA TẠI ĐÂY: Dùng bucketEnd làm mốc hiển thị. 
+                // Giúp điểm cuối cùng trên biểu đồ luôn hiển thị đúng giờ "hiện tại".
+                date: new Date(bucketEnd), 
+                startTime: bucketStart,
+                endTime: bucketEnd,
+                light: [], temp: [], humidity: [], gas: []
+            };
+        });
 
         // Đổ dữ liệu thô vào từng giỏ tương ứng
         docs.forEach(doc => {
             const docTime = doc[timeField].getTime();
-            let index = Math.floor((docTime - startTime.getTime()) / bucketSizeMs);
-            if (index >= points) index = points - 1; // Giới hạn an toàn chống tràn mảng
             
-            if (index >= 0) {
-                buckets[index].light.push(doc.light);
-                buckets[index].temp.push(doc.temp);
-                // Bảng Raw dùng 'hum', bảng Daily dùng 'humidity' -> Cần check để tương thích
-                buckets[index].humidity.push(doc.hum !== undefined ? doc.hum : doc.humidity);
-                buckets[index].gas.push(doc.gas);
+            // SỬA TẠI ĐÂY: Dùng <= b.endTime để vét trọn vẹn bản ghi sinh ra ở mi-li-giây hiện tại
+            const targetBucket = buckets.find(b => docTime >= b.startTime && docTime <= b.endTime);
+
+            if (targetBucket) {
+                targetBucket.light.push(doc.light);
+                targetBucket.temp.push(doc.temp);
+                targetBucket.humidity.push(doc.hum !== undefined ? doc.hum : doc.humidity);
+                targetBucket.gas.push(doc.gas);
             }
         });
 
-        // 4. TÍNH TRUNG BÌNH CỘNG CHO TỪNG GIỎ
-        // Biến này giúp giữ lại giá trị trước đó nếu mạng bị lag làm ESP mất kết nối vài giây (Forward Fill)
-        let lastValidData = { light: 0, temp: 0, humidity: 0, gas: 0 }; 
-        if (docs.length > 0) {
-            lastValidData = {
-                light: docs[0].light, temp: docs[0].temp, 
-                humidity: docs[0].hum !== undefined ? docs[0].hum : docs[0].humidity, gas: docs[0].gas
-            };
-        }
-
+        // 4. TÍNH TRUNG BÌNH CỘNG (ÉP VỀ 0 NẾU TRỐNG)
         const formattedChartData = buckets.map(b => {
-            const avg = (arr) => arr.length > 0 ? Number((arr.reduce((a, b) => a + b, 0) / arr.length).toFixed(1)) : null;
+            const avg = (arr) => arr.length > 0 ? Number((arr.reduce((val1, val2) => val1 + val2, 0) / arr.length).toFixed(1)) : 0;
 
-            const currentAvg = {
+            return {
                 date: b.date,
                 light: avg(b.light),
                 temp: avg(b.temp),
                 humidity: avg(b.humidity),
                 gas: avg(b.gas)
             };
-
-            // Nếu giỏ bị trống (do mất mạng), lấy giá trị của mốc liền kề trước đó đắp vào
-            if (currentAvg.light !== null) lastValidData.light = currentAvg.light; else currentAvg.light = lastValidData.light;
-            if (currentAvg.temp !== null) lastValidData.temp = currentAvg.temp; else currentAvg.temp = lastValidData.temp;
-            if (currentAvg.humidity !== null) lastValidData.humidity = currentAvg.humidity; else currentAvg.humidity = lastValidData.humidity;
-            if (currentAvg.gas !== null) lastValidData.gas = currentAvg.gas; else currentAvg.gas = lastValidData.gas;
-
-            return currentAvg;
         });
 
         res.status(200).json(formattedChartData);

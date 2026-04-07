@@ -79,15 +79,16 @@ export const signIn = async(req, res)=>{
         }
         // nêu đúng tạo access token với jwt 
         const accessToken = jwt.sign(
-            {userId: user._id}, // payload của token,có thể thêm nhiều thông tin khác nếu muốn
+            {userId: user._id}, // payload của token
             process.env.ACCESS_TOKEN_SECRET,
             {expiresIn: ACCESS_TOKEN_TTL} // access token có thời hạn 30 phút
         )
+        
 
         // tạo refresh token
         const refreshToken = crypto.randomBytes(64).toString('hex'); // tạo chuỗi ngẫu nhiên làm refresh token
 
-        // lưu session vào database (cần tạo model Session trước đó)
+        // lưu session vào database
         await Session.create({
             userId: user._id,
             refreshToken,

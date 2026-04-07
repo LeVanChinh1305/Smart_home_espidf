@@ -26,7 +26,7 @@ const uint8_t MASTER_UID[] = {0x9C, 0xD4, 0xF8, 0x05};
 #define LOW_GAS_THRESHOLD_MV 1500
 
 // Cấu hình SPI RFID
-#define RC522_MISO_PIN 2
+#define RC522_MISO_PIN 15
 #define RC522_MOSI_PIN 7
 #define RC522_SCLK_PIN 6
 #define RC522_CS_PIN   10
@@ -163,7 +163,6 @@ void dht11_task(void *pvParameters) {
 void light_task(void *pv){
     while(1){
         current_light = analog_get_light_percentage(); // Cập nhật biến toàn cục
-        ESP_LOGI("LIGHT", "Độ sáng: %.1f%%", current_light);
         vTaskDelay(pdMS_TO_TICKS(2000)); 
     }
 }

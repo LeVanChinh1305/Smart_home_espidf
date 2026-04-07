@@ -6,7 +6,7 @@
 
 // Định nghĩa các Channel dựa trên GPIO (Dành cho ESP32-C6 ADC1)
 #define GAS_ADC_CHAN      ADC_CHANNEL_4 // GPIO 4
-#define LIGHT_ADC_CHAN    ADC_CHANNEL_0 // GPIO 0 (Dùng 0 để tránh trùng SPI)
+#define LIGHT_ADC_CHAN    ADC_CHANNEL_1 // GPIO 1 (Dùng 1 để tránh trùng SPI)
 
 // Khởi tạo chung cho cả 2 cảm biến
 esp_err_t analog_sensors_init(void);

@@ -50,11 +50,10 @@ int analog_get_gas_voltage(void) { // Trả về điện áp (mV) từ cảm bi�
 }
 
 float analog_get_light_percentage(void) { // Trả về phần trăm ánh sáng, 0% = tối, 100% = sáng
-    int raw;
+   int raw;
     adc_oneshot_read(adc_handle, LIGHT_ADC_CHAN, &raw);
-    // Công thức: 100% khi trời sáng (Raw thấp), 0% khi tối (Raw cao)
     float percentage = 100.0 - ((float)raw * 100.0 / 4095.0);
-    if (percentage < 0) percentage = 0;
-    if (percentage > 100) percentage = 100;
+
+    ESP_LOGI(TAG, "LIGHT: Raw ADC = %d | Phan tram = %.1f%%", raw, percentage);
     return percentage;
 }
